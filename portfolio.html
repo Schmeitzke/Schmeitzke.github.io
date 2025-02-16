@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camiel Schmeitz - Portfolio</title>
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Navigation -->
+  <header class="bg-blue-900 text-white fixed w-full z-30 shadow transition duration-300">
+    <div class="container mx-auto flex justify-between items-center px-4 py-3">
+      <a href="index.html" class="text-2xl font-bold">Camiel Schmeitz</a>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="cv.html" class="hover:underline">CV</a></li>
+          <li><a href="portfolio.html" class="hover:underline">Portfolio</a></li>
+          <li><a href="about.html" class="hover:underline">About</a></li>
+          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="relative z-10 pt-20 container mx-auto px-4">
+    <section class="py-12" data-aos="fade-up">
+      <h1 class="text-4xl font-bold mb-8 text-center">Portfolio</h1>
+      <p class="text-center mb-12">A showcase of my projects. Click on any project for details or to visit the GitHub repository.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Item 1 -->
+        <div class="bg-white rounded shadow overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+          <img src="images/project1-thumbnail.jpg" alt="Project 1" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h2 class="text-2xl font-semibold mb-2">Project Title 1</h2>
+            <p class="mb-4">A brief description of project 1 showcasing its core features.</p>
+            <a href="https://github.com/Schmeitzke/project1" target="_blank" class="px-4 py-2 bg-blue-900 text-white rounded-full hover:bg-blue-800 transition duration-300">View on GitHub</a>
+          </div>
+        </div>
+        <!-- Project Item 2 -->
+        <div class="bg-white rounded shadow overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+          <img src="images/project2-thumbnail.jpg" alt="Project 2" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h2 class="text-2xl font-semibold mb-2">Project Title 2</h2>
+            <p class="mb-4">A brief description of project 2 that highlights key functionalities.</p>
+            <a href="https://github.com/Schmeitzke/project2" target="_blank" class="px-4 py-2 bg-blue-900 text-white rounded-full hover:bg-blue-800 transition duration-300">View on GitHub</a>
+          </div>
+        </div>
+        <!-- Additional projects can be added similarly -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative z-20 bg-blue-900 text-white py-6 mt-12">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Camiel Schmeitz. All rights reserved.</p>
+      <div class="mt-4 flex justify-center space-x-4">
+        <a href="https://twitter.com/SchmeitzkeC" target="_blank" class="hover:underline">Twitter</a>
+        <a href="https://github.com/Schmeitzke" target="_blank" class="hover:underline">GitHub</a>
+        <a href="https://linkedin.com/in/camielschmeitz" target="_blank" class="hover:underline">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+  <!-- Custom JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

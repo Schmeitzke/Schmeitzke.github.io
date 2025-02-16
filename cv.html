@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camiel Schmeitz - CV</title>
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Navigation (Same as Home) -->
+  <header class="bg-blue-900 text-white fixed w-full z-30 shadow transition duration-300">
+    <div class="container mx-auto flex justify-between items-center px-4 py-3">
+      <a href="index.html" class="text-2xl font-bold">Camiel Schmeitz</a>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="cv.html" class="hover:underline">CV</a></li>
+          <li><a href="portfolio.html" class="hover:underline">Portfolio</a></li>
+          <li><a href="about.html" class="hover:underline">About</a></li>
+          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="relative z-10 pt-20 container mx-auto px-4">
+    <section class="py-12" data-aos="fade-up">
+      <h1 class="text-4xl font-bold mb-8 text-center">Curriculum Vitae</h1>
+      <div class="space-y-8">
+        <!-- Professional Summary -->
+        <div>
+          <h2 class="text-2xl font-semibold mb-2">Professional Summary</h2>
+          <p>Data Science and AI student with a diverse background in fiscal economics, practical work in various sectors, and a passion for developing advanced AI systems.</p>
+        </div>
+        <!-- Education -->
+        <div>
+          <h2 class="text-2xl font-semibold mb-2">Education</h2>
+          <ul class="list-disc ml-6">
+            <li><strong>Maastricht University</strong> – Data Science and Artificial Intelligence (2022–Present)</li>
+            <li><strong>Maastricht University</strong> – Fiscal Economics (Prior to 2022)</li>
+          </ul>
+        </div>
+        <!-- Professional Experience -->
+        <div>
+          <h2 class="text-2xl font-semibold mb-2">Professional Experience</h2>
+          <ul class="list-disc ml-6">
+            <li><strong>Freelance Developer</strong> – Experience with Large Language Models and AI projects for financial communications.</li>
+            <li><strong>Housing Assistant</strong> at <a href="https://www.zuyderland.nl/" target="_blank" class="text-blue-600 hover:underline">Zuyderland</a> – Supported elderly residents during the COVID-19 pandemic.</li>
+            <li><strong>Sales Representative</strong> at Spark – Promoted sustainable energy solutions.</li>
+          </ul>
+        </div>
+        <!-- Technical Skills -->
+        <div>
+          <h2 class="text-2xl font-semibold mb-2">Technical Skills</h2>
+          <ul class="list-disc ml-6">
+            <li>Java</li>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>Large Language Models (LLMs)</li>
+          </ul>
+        </div>
+        <!-- Download CV -->
+        <div class="text-center mt-8">
+          <a href="assets/Camiel_CV.pdf" class="px-6 py-3 bg-blue-900 text-white rounded-full font-semibold shadow hover:bg-blue-800 transition duration-300" target="_blank">Download PDF</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative z-20 bg-blue-900 text-white py-6 mt-12">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Camiel Schmeitz. All rights reserved.</p>
+      <div class="mt-4 flex justify-center space-x-4">
+        <a href="https://twitter.com/SchmeitzkeC" target="_blank" class="hover:underline">Twitter</a>
+        <a href="https://github.com/Schmeitzke" target="_blank" class="hover:underline">GitHub</a>
+        <a href="https://linkedin.com/in/camielschmeitz" target="_blank" class="hover:underline">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+  <!-- Custom JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

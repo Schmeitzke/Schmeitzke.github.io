@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* 1. Define color variables so you can change them easily. */
+:root {
+  --bg-color: #171516;       /* Dark purple background */
+  --text-color: #FFFFFF;     /* Default text color (white) */
+  --link-hover-color: #BB86FC; /* Lighter purple for hover effect */
+  --square-color: #45345e;   /* Color of the purple square */
+  --translucent-square-color: #fbfbfb5f; /* Foggy, see-through white */
+  --colour-camiel: #7d38eb; /* Colour "Camiel" */
+  --big-background-text: #1d1721; /* Engineer text */
+  /* New menu variables */
+  --menu-font-family: 'Poppins', sans-serif;
+  --menu-font-size: 1.2rem;
+  --menu-options-color: var(--text-color);
+}
+
+/* 2. Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 3. Body: apply the main background color */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  position: relative; /* So absolute elements can be positioned within the page */
+}
+
+/* 4. Top Bar */
+.top-bar {
+  background-color: var(--bg-color); /* matches body or adjust if desired */
+  padding: 2rem 0;
+}
+
+.top-bar .container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 2rem; /* Adjust as needed */
+}
+
+/* 5. Container to limit width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* 6. Navigation Menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8rem; /* Increased space between options */
+  padding-right: 1rem; /* Shifts menu further right */
+}
+
+/* 7. Navigation Links */
+nav ul li a {
+  text-decoration: none;
+  color: var(--menu-options-color);
+  font-size: var(--menu-font-size);
+  font-family: var(--menu-font-family);
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--link-hover-color);
+}
+
+/* 8. Purple Square (customizable) */
+.purple-square {
+  position: absolute;
+  top: 550%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  background-color: var(--square-color);
+  z-index: 2; /* ensure proper layering */
+}
+
+/* Styles for Translucent Square */
+.translucent-square {
+  position: absolute;
+  top: 510%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  width: 650px;
+  height: 500px;
+  background-color: transparent;
+  backdrop-filter: blur(15px);
+  border: 1px solid #ffffff42;
+  z-index: 3;             /* Ensure proper stacking */
+}
+
+/* New styles for text inside the translucent square */
+.translucent-square .blurry-square-text {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(0, -50%);
+  text-align: left;
+}
+.translucent-square .blurry-square-text .line {
+  margin: 0 0 1rem 0; /* Increase bottom margin for more space between lines */
+  font-size: 4rem;
+}
+.translucent-square .blurry-square-text .line-1 { 
+  font-size: 2rem; /* Hi is small */
+}
+.translucent-square .blurry-square-text .line-2 { 
+  font-size: 5rem; /* "my name is" is bigger */
+}
+.translucent-square .blurry-square-text .line-3 { 
+  /* The "Camiel" text */
+  font-size: 5rem; /* "Camiel" is bigger */
+}
+.translucent-square .blurry-square-text .line-4 { 
+  font-size: 2rem; /* ML Engineer is medium */
+}
+.translucent-square .blurry-square-text span {
+  color: var(--colour-camiel);
+}
+
+.big-background-text {
+  position: absolute;
+  top: 500%;
+  left: 5%;
+  transform: translate(0, -50%);
+  text-align: left;
+  font-size: 20rem;
+  color: var(--big-background-text);
+  z-index: 1; /* ensure proper layering */
+}
