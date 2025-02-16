@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* 1. Define color variables so you can change them easily. */
+/* 1. Define color variables */
 :root {
-  --bg-color: #171516;       /* Dark purple background */
-  --text-color: #FFFFFF;     /* Default text color (white) */
-  --link-hover-color: #BB86FC; /* Lighter purple for hover effect */
-  --square-color: #45345e;   /* Color of the purple square */
-  --translucent-square-color: #fbfbfb5f; /* Foggy, see-through white */
-  --colour-camiel: #7d38eb; /* Colour "Camiel" */
-  --big-background-text: #1d1721; /* Engineer text */
-  /* New menu variables */
+  --bg-color: #171516;                  /* Dark purple background */
+  --text-color: #FFFFFF;                /* Default text color (white) */
+  --link-hover-color: #BB86FC;          /* Lighter purple for hover effect */
+  --square-color: #45345e;              /* Color of the purple square */
+  --translucent-square-color: rgba(251, 251, 251, 0.37); /* Foggy white */
+  --colour-camiel: #7d38eb;             /* Accent color for "Camiel" */
+  --big-background-text: #1d1721;       /* Dark text for big background text */
   --menu-font-family: 'Poppins', sans-serif;
-  --menu-font-size: 1.2rem;
+  --menu-font-size: 0.8rem;
   --menu-options-color: var(--text-color);
 }
 
@@ -22,27 +21,29 @@
   box-sizing: border-box;
 }
 
-/* 3. Body: apply the main background color */
+/* 3. Body Styles */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
-  position: relative; /* So absolute elements can be positioned within the page */
+  position: relative;
+  min-height: 100vh;
 }
 
 /* 4. Top Bar */
 .top-bar {
-  background-color: var(--bg-color); /* matches body or adjust if desired */
+  background-color: var(--bg-color);
   padding: 2rem 0;
 }
 
+/* Container (for nav alignment) */
 .top-bar .container {
   width: 100%;
   max-width: 100%;
-  padding: 0 2rem; /* Adjust as needed */
+  padding: 0 2rem;
 }
 
-/* 5. Container to limit width */
+/* 5. Container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -54,8 +55,8 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  gap: 8rem; /* Increased space between options */
-  padding-right: 1rem; /* Shifts menu further right */
+  gap: 8rem;
+  padding-right: 1rem;
 }
 
 /* 7. Navigation Links */
@@ -71,33 +72,52 @@ nav ul li a:hover {
   color: var(--link-hover-color);
 }
 
-/* 8. Purple Square (customizable) */
-.purple-square {
-  position: absolute;
-  top: 550%;
-  left: 65%;
-  transform: translate(-50%, -50%);
-  width: 700px;
-  height: 700px;
-  background-color: var(--square-color);
-  z-index: 2; /* ensure proper layering */
+/* 8. Hero Section
+   - Provide enough vertical space (e.g., 600vh) so "top: 550vh" is visible */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjusted from 600vh */
 }
 
-/* Styles for Translucent Square */
+/* 9. Big Background Text */
+.big-background-text {
+  position: absolute;
+  top: 40%;    /* Adjusted from 500vh */
+  left: 10vw;     /* 5% of the viewport width */
+  transform: translate(0, -50%);
+  font-size: 15vw;            /* Scale text with viewport width */
+  color: var(--big-background-text);
+  z-index: 1; /* behind squares and photo */
+}
+
+/* 10. Purple Square (Viewport-based) */
+.purple-square {
+  position: absolute;
+  top: 40%;          /* Adjusted from 550vh */
+  left: 65vw;          /* 65% -> 65vw */
+  transform: translate(-50%, -50%);
+  width: 40vw;         /* Replaces 700px with a ratio-based approach */
+  height: 30vw;        /* Keep it square, same ratio as width */
+  background-color: var(--square-color);
+  z-index: 2;
+}
+
+/* 11. Translucent Square */
 .translucent-square {
   position: absolute;
-  top: 510%;
-  left: 35%;
+  top: 40%;          /* Adjusted from 510vh */
+  left: 35vw;          /* 35% -> 35vw */
   transform: translate(-50%, -50%);
-  width: 650px;
-  height: 500px;
+  width: 28vw;         /* ~650px replaced with 28vw (keep similar ratio) */
+  height: 22vw;        /* ~500px replaced with 22vw */
   background-color: transparent;
   backdrop-filter: blur(15px);
   border: 1px solid #ffffff42;
-  z-index: 3;             /* Ensure proper stacking */
+  z-index: 3;
 }
 
-/* New styles for text inside the translucent square */
+/* Text inside the translucent square */
 .translucent-square .blurry-square-text {
   position: absolute;
   top: 50%;
@@ -105,34 +125,47 @@ nav ul li a:hover {
   transform: translate(0, -50%);
   text-align: left;
 }
+
 .translucent-square .blurry-square-text .line {
-  margin: 0 0 1rem 0; /* Increase bottom margin for more space between lines */
+  margin: 0 0 1rem 0;
   font-size: 4rem;
+  color: var(--text-color);
 }
-.translucent-square .blurry-square-text .line-1 { 
-  font-size: 2rem; /* Hi is small */
+
+.translucent-square .blurry-square-text .line-1 {
+  font-size: 1.5rem; /* "Hi," is smaller */
+  font-weight: 300;
 }
-.translucent-square .blurry-square-text .line-2 { 
-  font-size: 5rem; /* "my name is" is bigger */
+.translucent-square .blurry-square-text .line-2 {
+  font-size: 3rem; /* "my name is" is bigger */
+  font-weight: 500;
 }
-.translucent-square .blurry-square-text .line-3 { 
-  /* The "Camiel" text */
-  font-size: 5rem; /* "Camiel" is bigger */
+.translucent-square .blurry-square-text .line-3 {
+  font-size: 3rem; /* "Camiel" is bigger */
+  font-weight: bold;
 }
-.translucent-square .blurry-square-text .line-4 { 
-  font-size: 2rem; /* ML Engineer is medium */
+.translucent-square .blurry-square-text .line-4 {
+  font-size: 1.5rem; /* "ML Engineer" is medium */
+  font-weight: 100;
 }
 .translucent-square .blurry-square-text span {
   color: var(--colour-camiel);
 }
 
-.big-background-text {
+/* 12. Torso Photo */
+.torso-photo {
   position: absolute;
-  top: 500%;
-  left: 5%;
-  transform: translate(0, -50%);
-  text-align: left;
-  font-size: 20rem;
-  color: var(--big-background-text);
-  z-index: 1; /* ensure proper layering */
+  top: 40%;  /* Adjusted from 469vh */
+  left: 65vw;  /* 65% -> 65vw */
+  transform: translate(-50%, -50%);
+  width: 35vw;  /* Replaces 850px with a ratio-based approach */
+  height: 35vw; /* Keep it square, matching original ratio */
+  z-index: 3;
+  pointer-events: none;
+}
+
+.torso-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
