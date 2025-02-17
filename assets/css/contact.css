@@ -1,5 +1,6 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('animations.css');
 
 /* Define shared variables to match the CV page */
 :root {
@@ -43,6 +44,7 @@ body {
 /* Main Content Padding */
 .main-content {
   padding: 4rem 0;
+  animation: slideUp 0.5s ease-out;
 }
 
 /* Contact Section Styles */

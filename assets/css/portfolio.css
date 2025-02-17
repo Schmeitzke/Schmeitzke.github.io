@@ -1,5 +1,6 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('animations.css');
 
 /* 1. Define shared variables */
 :root {
@@ -40,6 +41,7 @@ body {
   padding: 5% 0;
   margin-bottom: 70px; /* Added margin to avoid overlap with fixed footer */
   flex: 1;
+  animation: slideUp 0.5s ease-out; /* Automatic slide-up animation for main content */
 }
 
 /* 9. Footer */

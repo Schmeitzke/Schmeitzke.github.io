@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('animations.css');
 
 /* 1. Define color variables */
 :root {
@@ -84,6 +85,7 @@ nav ul li a:hover {
   position: relative;
   width: 100%;
   height: calc(80vw * 0.5625);
+  animation: slideUp 0.5s ease-out;
 }
 
 /* 9. Big Background Text */
@@ -143,8 +145,13 @@ nav ul li a:hover {
   font-size: 2.7vw; /* ~24px at 1920px width */
   font-weight: 100;
 }
+
 .translucent-square .blurry-square-text span {
   color: var(--colour-camiel);
+}
+
+.translucent-square .blurry-square-text {
+  padding-left: 1rem;
 }
 
 /* 12. Torso Photo */
