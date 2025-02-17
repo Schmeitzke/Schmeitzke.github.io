@@ -6,18 +6,28 @@ document.addEventListener("DOMContentLoaded", function() {
   fetch("assets/includes/topbar.html")
     .then(response => response.text())
     .then(html => {
-      // Insert the fetched HTML into the placeholder div
-      document.getElementById("topbar-placeholder").innerHTML = html;
+      const topbarPlaceholder = document.getElementById("topbar-placeholder");
+      if (!topbarPlaceholder) return;
+      topbarPlaceholder.innerHTML = html;
 
-      // Determine the current page from the URL
+      // Determine current page from the URL
       let currentPage = window.location.pathname.split("/").pop();
-      // Default to index.html if URL is empty
       if (!currentPage) currentPage = "index.html";
 
-      // Select the link that matches the current page and add the 'active' class
-      const activeLink = document.querySelector(`nav ul li a[href="${currentPage}"]`);
+      // Query within the injected topbar HTML
+      const activeLink = topbarPlaceholder.querySelector(`nav ul li a[href="${currentPage}"]`);
       if (activeLink) {
         activeLink.classList.add("active");
+      }
+
+      // Attach click event for mobile hamburger
+      const hamburger = topbarPlaceholder.querySelector('.hamburger');
+      const menu = topbarPlaceholder.querySelector('.menu');
+      if (hamburger && menu) {
+        hamburger.addEventListener('click', function(e) {
+          e.preventDefault();
+          menu.classList.toggle('open');
+        });
       }
     })
     .catch(error => console.error("Error loading topbar:", error));
