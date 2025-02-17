@@ -124,24 +124,63 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  /* Adjust the dropdown for mobile: unfold downward */
+
+  /* .menu overrides */
   .menu {
-    top: 100%;            /* position below the hamburger */
-    right: auto;
-    left: 0;
-    transform: none;
-    opacity: 0;           /* hidden by default */
+    position: fixed;
+    top: 25%;
+    right: 0;
+    left: auto;
+    width: 60%;
+    height: 32%;
+    background: #333333;
+    z-index: 9999;
+    border-radius: 20px;
+    display: none;
+    opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
   }
+
   .menu.open {
+    display: block;
     opacity: 1;
     pointer-events: auto;
   }
-  /* Disable hover activation on mobile */
-  .menu-container:hover .menu,
-  .menu:hover {
-    opacity: 0;
-    pointer-events: none;
+
+  /* Force removal of any margin/gap on the UL and LI */
+  .menu ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    /* Make sure there's no gap if you had 'gap' set */
+    gap: 0 !important;
+  }
+
+  .menu ul li {
+    margin: 0 !important;
+    padding: 0.1rem !important;
+  }
+
+  /* Make sure anchor tags don’t add extra spacing */
+  .menu ul li a {
+    display: block;
+    background: #444;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin: 0 !important;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    color: #fff;
+    font-size: 1rem;
+    /* Reduce line-height to remove any extra text spacing */
+    line-height: 1;
+  }
+
+  .menu ul li a:hover {
+    background: #555;
   }
 }
