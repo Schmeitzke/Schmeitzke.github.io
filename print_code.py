@@ -26,8 +26,8 @@ def print_codebase_to_file(root_dir, output_file):
             indent = '  ' * level
             rel_path = os.path.relpath(root, root_dir)
             
-            # Only show root directory and css directory
-            if rel_path == '.' or rel_path == os.path.join('assets', 'css'):
+            # Only show root directory, css directory, and js directory
+            if rel_path == '.' or rel_path in [os.path.join('assets', 'css'), os.path.join('assets', 'js')]:
                 f.write(f"{indent}{os.path.basename(root) if rel_path != '.' else 'root'}/\n")
                 subindent = '  ' * (level + 1)
                 for file in files:
