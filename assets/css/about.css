@@ -1,33 +1,32 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-/* Import shared top bar styles */
-@import url('topbar.css');
 
-/* 1. Define shared colour and typography variables */
+/* Define shared variables */
 :root {
-  --bg-color: #171516;           /* Dark purple background */
-  --text-color: #FFFFFF;         /* White text */
-  --link-hover-color: #BB86FC;   /* Lighter purple for hover */
-  --menu-font-family: 'Poppins', sans-serif;
-  --menu-font-size: 0.8rem;
+  --bg-color: #171516;
+  --text-color: #FFFFFF;
+  --accent-color: #BB86FC;
+  --font-family: 'Poppins', sans-serif;
+  --header-font-size: 2.5rem;
+  --body-font-size: 1rem;
 }
 
-/* 2. Global Reset */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 3. Body Styles */
+/* Body Styles */
 body {
-  font-family: var(--menu-font-family);
+  font-family: var(--font-family);
   background-color: var(--bg-color);
   color: var(--text-color);
-  min-height: 100vh;
+  line-height: 1.6;
 }
 
-/* 4. Container for layout */
+/* Container */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -35,16 +34,22 @@ body {
   padding: 0 1rem;
 }
 
-/* 6. Main Content */
+/* Main Content Padding */
 .main-content {
   padding: 4rem 0;
 }
 
-/* 7. About Section */
+/* About Section */
+.about-section {
+  margin-bottom: 3rem;
+}
+
 .about-section h1 {
-  font-size: 2.5rem;
+  font-size: var(--header-font-size);
   text-align: center;
   margin-bottom: 2rem;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.5rem;
 }
 
 .about-text p {
@@ -53,7 +58,17 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* 8. Footer */
+/* Anchor Styling */
+.about-text a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.about-text a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styling */
 footer {
   padding: 2rem 0;
   text-align: center;

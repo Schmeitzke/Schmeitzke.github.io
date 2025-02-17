@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Camiel Schmeitz</title>
+  <title>Camiel Schmeitz - About Me</title>
   <!-- 1) Link to topbar.css first -->
   <link rel="stylesheet" href="assets/css/topbar.css" />
-  <!-- 2) Then link the page-specific CSS (styles.css) -->
+  <!-- Add shared styles.css to ensure identical topbar styling -->
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <!-- 2) Then link the page-specific CSS (about.css) -->
+  <link rel="stylesheet" href="assets/css/about.css" />
 </head>
 <body>
-  <!-- Placeholder for topbar (injected by topbar.js) -->
+  <!-- Topbar placeholder injected by topbar.js -->
   <div id="topbar-placeholder"></div>
   
   <!-- Main Content -->
@@ -19,10 +21,22 @@
       <h1>About Me</h1>
       <div class="about-text">
         <p>
-          I am Camiel Schmeitz, a dedicated student of Data Science and Artificial Intelligence at Maastricht University. My academic journey has been marked by a transition from Fiscal Economics to the dynamic world of data science and AI. I have gained practical experience through various roles—from freelancing on advanced LLM systems to supporting community projects.
+          My academic journey began after graduating from middle school, leading me to enroll in <a href="https://www.maastrichtuniversity.nl/">Maastricht University</a> where I pursued studies in Fiscal Economics. For two years, I delved into the complexities of fiscal economics and law, developing a deep appreciation for these fields. However, as I envisioned my future, I realized my passion lay elsewhere.
         </p>
         <p>
-          My passion for technology and innovation drives me to explore new challenges and create impactful solutions. In addition to my academic and professional work, I am actively involved in local initiatives, contributing to community events and supporting sustainable projects.
+          In 2022, I made the pivotal decision to transition into the Data Science and Artificial Intelligence program at Maastricht University—a choice I have wholeheartedly embraced. The dynamic realms of data science and AI have captivated me from the start, and I have dedicated myself fully to mastering these disciplines.
+        </p>
+        <p>
+          As a freelancer, I have extensive experience working with Large Language Models (LLMs) and am open to a wide range of projects within the data science and AI fields. My current project involves developing advanced LLM systems for analyzing financial communications, aimed at informing strategic decisions in the financial markets.
+        </p>
+        <p>
+          From October 2023 to June 2024, I worked as a freelance Data Annotator and Red Teaming contractor for <a href="https://outlier.ai/" target="_blank">Outlier.ai</a>, focusing on assessing large language models and annotating training data.
+        </p>
+        <p>
+          Before launching my career in AI, I gathered diverse experience. Between February 2018 and October 2023, I worked as a warehouse employee at <a href="https://www.meijers.com/" target="_blank">L.M. Meijers Bv</a>, provided elderly care at <a href="https://www.zuyderland.nl/" target="_blank">Zuyderland's healthcare facilities</a>, and served as a door-to-door sales representative for <a href="https://duurzaamverbond.nl/" target="_blank">Duurzaam Verbond</a>, promoting sustainable products.
+        </p>
+        <p>
+          I am always open to new freelance opportunities and collaborations. If you have a project where my expertise in data science and AI can be of assistance, please feel free to <a href="contact.html" target="_blank">contact me</a>.
         </p>
       </div>
     </section>
@@ -38,5 +52,11 @@
   <!-- JavaScript Files -->
   <script src="assets/js/topbar.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    // Add target="_blank" to all links in the about page
+    document.querySelectorAll('a').forEach(link => {
+      link.setAttribute('target', '_blank');
+    });
+  </script>
 </body>
 </html>
