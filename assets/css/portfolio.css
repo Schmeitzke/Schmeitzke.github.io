@@ -20,24 +20,36 @@
   box-sizing: border-box;
 }
 
+/* Add flex layout to push footer to document bottom when content is short */
+html, body {
+  height: 100%;
+}
+
 /* 3. Body Styles */
 body {
   font-family: var(--menu-font-family);
   background-color: var(--bg-color);
   color: var(--text-color);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* 6. Main Content */
 .main-content {
   padding: 5% 0;
+  margin-bottom: 70px; /* Added margin to avoid overlap with fixed footer */
+  flex: 1;
 }
 
 /* 9. Footer */
 footer {
+  position: static; /* Footer appears at the end of the document */
+  width: 100%;
   padding: 3% 0;
   text-align: center;
   background-color: var(--bg-color);
+  z-index: 10;
 }
 
 /* --- Grid System for Tiles --- */
@@ -51,8 +63,7 @@ footer {
 
 .tile {
   background-color: var(--tile-color);
-  /* Ensure each tile remains a square */
-  aspect-ratio: 1;
+  height: 150%; /* New fixed height to shorten the tile */
   border-radius: 20px; /* Rounded corners */
   position: relative;  /* Added for absolute positioning of child elements */
 }
@@ -123,4 +134,32 @@ footer {
 @keyframes flicker {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.7; }
+}
+
+/* Add responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .tile-grid {
+    grid-template-columns: 1fr;
+  }
+  .tile {
+    height: auto;          
+    padding-bottom: 60px;   /* Increased padding to keep text from overlapping footer elements */
+    position: relative;     
+  }
+  .github-link {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 30%;
+    text-align: center;
+    margin: 0;
+  }
+  .tile-status {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30%;
+    text-align: center;
+    margin: 0;
+  }
 }
