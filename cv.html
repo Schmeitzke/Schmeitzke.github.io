@@ -3,62 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Camiel Schmeitz</title>
-  <!-- 1) Link to topbar.css first -->
+  <title>Camiel Schmeitz - Curriculum Vitae</title>
+  <!-- Link shared topbar styles -->
   <link rel="stylesheet" href="assets/css/topbar.css" />
-  <!-- 2) Then link the page-specific CSS (styles.css) -->
+  <!-- Added shared styles.css to match portfolio -->
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <!-- Link the page-specific CV styles -->
+  <link rel="stylesheet" href="assets/css/cv.css" />
 </head>
 <body>
-  <!-- Placeholder for topbar (injected by topbar.js) -->
+  <!-- Topbar placeholder injected by topbar.js -->
   <div id="topbar-placeholder"></div>
   
   <!-- Main Content -->
   <main class="container main-content">
+    <!-- Header Section with Name, Title, and Contact Information -->
+    <header class="cv-header">
+      <h1>Camiel Schmeitz</h1>
+      <h2>DATA SCIENCE AND AI DEVELOPER</h2>
+      <p class="contact-info">
+        <span>camielschmeitz@gmail.com</span> | 
+        <span>+31637557073</span>
+      </p>
+    </header>
+    
+    <!-- Experience Section -->
     <section class="cv-section">
-      <h1>Curriculum Vitae</h1>
-      <div class="cv-content">
-        <div class="cv-item">
-          <h2>Professional Summary</h2>
-          <p>
-            Data Science and AI student with a diverse background in fiscal economics, practical work in various sectors, and a passion for developing advanced AI systems.
-          </p>
-        </div>
-        <div class="cv-item">
-          <h2>Education</h2>
-          <ul>
-            <li><strong>Maastricht University</strong> – Data Science and Artificial Intelligence (2022–Present)</li>
-            <li><strong>Maastricht University</strong> – Fiscal Economics (Prior to 2022)</li>
-          </ul>
-        </div>
-        <div class="cv-item">
-          <h2>Professional Experience</h2>
-          <ul>
-            <li><strong>Freelance Developer</strong> – Experience with Large Language Models and AI projects for financial communications.</li>
-            <li>
-              <strong>Housing Assistant</strong> at 
-              <a href="https://www.zuyderland.nl/" target="_blank">Zuyderland</a> – Supported elderly residents during the COVID-19 pandemic.
-            </li>
-            <li><strong>Sales Representative</strong> at Spark – Promoted sustainable energy solutions.</li>
-          </ul>
-        </div>
-        <div class="cv-item">
-          <h2>Technical Skills</h2>
-          <ul>
-            <li>Java</li>
-            <li>Python</li>
-            <li>SQL</li>
-            <li>Large Language Models (LLMs)</li>
-          </ul>
-        </div>
-        <div class="cv-download">
-          <a href="assets/Camiel_CV.pdf" target="_blank">Download PDF</a>
-        </div>
+      <h2>Experience</h2>
+      <!-- Experience Item 1 -->
+      <div class="experience-item">
+        <h3>Full Stack Machine Learning Engineer (Freelance)</h3>
+        <span class="date-range">June 2024 - Now</span>
+        <p>
+          Collaborated on the development of an advanced AI-driven analytics platform, focusing on machine learning model creation, data management, and full-stack application development to support automated decision-making processes on the options and futures market.
+        </p>
+      </div>
+      <!-- Experience Item 2 -->
+      <div class="experience-item">
+        <h3>Freelance Data Annotator and Red Teaming (Freelance)</h3>
+        <span class="date-range">October 2023 – June 2024</span>
+        <p>
+          Independent contractor for Outlier.ai, focusing on the assessment of large language models (LLMs) and annotation of training data.
+        </p>
+      </div>
+      <!-- Experience Item 3 -->
+      <div class="experience-item">
+        <h3>Early Career Experience</h3>
+        <span class="date-range">February 2018 – October 2023</span>
+        <p>
+          Worked as a warehouse employee at L.M. Meijers Bv, provided elderly care at Zuyderland's healthcare facilities, and served as a door-to-door sales representative for Duurzaam Verbond, promoting sustainable products.
+        </p>
       </div>
     </section>
+    
+    <!-- Education Section -->
+    <section class="cv-section">
+      <h2>Education</h2>
+      <!-- Education Item 1 -->
+      <div class="education-item">
+        <h3>Maastricht University</h3>
+        <span class="date-range">September 2020 – Now</span>
+        <ul>
+          <li>BSc Data Science and Artificial Intelligence</li>
+          <li>BSc Fiscal Economics (not graduated)</li>
+        </ul>
+      </div>
+      <!-- Education Item 2 -->
+      <div class="education-item">
+        <h3>Atheneum Trevianum Scholengroep</h3>
+        <span class="date-range">September 2013 – July 2020</span>
+      </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section class="cv-section">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Cython</li>
+        <li>Cross-Platform Development</li>
+        <li>Data Cleaning</li>
+        <li>Data Formatting</li>
+        <li>Database Management</li>
+        <li>Django</li>
+        <li>Django ORM</li>
+        <li>Git</li>
+        <li>GitHub Workflow</li>
+        <li>Git LFS</li>
+        <li>Huggingface</li>
+        <li>Java</li>
+        <li>LLM Training</li>
+        <li>Multithreading</li>
+        <li>MySQL</li>
+        <li>PyTorch</li>
+        <li>Project Management</li>
+        <li>Python</li>
+        <li>React</li>
+        <li>REST API</li>
+        <li>Shell Scripting</li>
+        <li>Web Scraping</li>
+        <li>SQL</li>
+        <li>Typescript</li>
+      </ul>
+    </section>
+    
+    <!-- Download Button -->
+    <div class="cv-download">
+      <a class="download-btn" href="assets\Camiel_CV.pdf" target="_blank">Download PDF</a>
+    </div>
   </main>
   
-  <!-- Footer -->
+  <!-- Footer Section -->
   <footer>
     <div class="container">
       <p>&copy; 2025 Camiel Schmeitz. All rights reserved.</p>
