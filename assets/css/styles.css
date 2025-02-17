@@ -127,9 +127,10 @@ nav ul li a:hover {
 
 /* Text inside the translucent square – Revised for scalable font sizing on large screens */
 .translucent-square .blurry-square-text .line-1 {
-  font-size: 2.7vw; /* ~24px at 1920px width */
+  font-size: 2.7vw; /* Base value for large screens */
   font-weight: 300;
 }
+
 
 .translucent-square .blurry-square-text .line-2 {
   font-size: 4.2vw; /* ~48px at 1920px width */
@@ -171,3 +172,45 @@ nav ul li a:hover {
   height: 100%;
   object-fit: contain;
 }
+
+/* Non-linear shrink for "my name is" text */
+@media (max-width: 1200px) {
+  .translucent-square .blurry-square-text .line-2 {
+    font-size: 3vw;
+  }
+}
+
+/* Non-linear shrink for "my name is" text */
+@media (max-width: 200px) {
+  .translucent-square .blurry-square-text .line-2 {
+    font-size: 2vw;
+  }
+}
+
+/* Grid styles for the 2x2 layout */
+.page-grid {
+  width: 40%; /* Changed from 90% to 60% */
+  margin: 2rem auto; /* Optional spacing */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem; /* Increased spacing between buttons */
+}
+
+.grid-square {
+  background-color: var(--square-color); /* Or use any desired color */
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: clamp(1rem, 1vw, 1rem); /* Font size scales with button size */
+  /* Adjust aspect ratio to be less tall */
+  aspect-ratio: 2;
+  transition: background-color 0.3s ease;
+  border-radius: 15px; /* Added for rounded corners */
+}
+
+.grid-square:hover {
+  background-color: var(--link-hover-color);
+}
+
