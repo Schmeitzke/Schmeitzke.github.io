@@ -83,7 +83,7 @@ nav ul li a:hover {
 .hero {
   position: relative;
   width: 100%;
-  height: calc(100vw * 0.5625);
+  height: calc(80vw * 0.5625);
 }
 
 /* 9. Big Background Text */
