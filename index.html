@@ -4,36 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Camiel Schmeitz</title>
+  <!-- 1) Link to topbar.css first -->
+  <link rel="stylesheet" href="assets/css/topbar.css" />
+  <!-- 2) Then link the page-specific CSS (styles.css) -->
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <!-- Top Bar -->
-  <header class="top-bar">
-    <div class="container">
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="portfolio.html">Projects</a></li>
-          <li><a href="cv.html">CV</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Large Hero Section to allow scrolling & high offsets -->
+  <!-- Placeholder for topbar (injected by topbar.js) -->
+  <div id="topbar-placeholder"></div>
+  
+  <!-- Hero Section -->
   <section class="hero">
-    <!-- Big Background Text -->
     <div class="big-background-text">
       <p class="line line-1">ENGI</p>
       <p class="line line-2">NEER</p>
     </div>
-  
-    <!-- Purple Square -->
     <div class="purple-square"></div>
-
-    <!-- Translucent Square -->
     <div class="translucent-square">
       <div class="blurry-square-text">
         <h2 class="line line-1">Hi,</h2>
@@ -42,11 +28,20 @@
         <h2 class="line line-4">ML Engineer</h2>
       </div>
     </div>
-
-    <!-- Torso Photo -->
     <div class="torso-photo">
-      <img src="images\Selfie-removebg-preview.png" alt="Torso Photo" />
+      <img src="images/Selfie-removebg-preview.png" alt="Torso Photo" />
     </div>
   </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Camiel Schmeitz. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- JavaScript Files -->
+  <script src="assets/js/topbar.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

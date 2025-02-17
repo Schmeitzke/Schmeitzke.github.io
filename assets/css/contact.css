@@ -1,0 +1,115 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* Import shared top bar styles */
+@import url('topbar.css');
+
+/* 1. Define shared colour and typography variables */
+:root {
+  --bg-color: #171516;
+  --text-color: #FFFFFF;
+  --link-hover-color: #BB86FC;
+  --menu-font-family: 'Poppins', sans-serif;
+  --menu-font-size: 0.8rem;
+  --button-bg-color: #45345e;
+  --button-hover-color: #BB86FC;
+}
+
+/* 2. Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 3. Body Styles */
+body {
+  font-family: var(--menu-font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+/* 4. Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* 6. Main Content */
+.main-content {
+  padding: 4rem 0;
+}
+
+/* 7. Contact Section */
+.contact-section h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.contact-section .intro {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* 8. Form Styles */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ffffff42;
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--link-hover-color);
+}
+
+.form-submit {
+  text-align: center;
+}
+
+.form-submit button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--button-bg-color);
+  border: none;
+  border-radius: 20px;
+  color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-submit button:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* 9. Footer */
+footer {
+  padding: 2rem 0;
+  text-align: center;
+  background-color: var(--bg-color);
+}

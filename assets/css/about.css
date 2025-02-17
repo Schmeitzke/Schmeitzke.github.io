@@ -1,0 +1,61 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* Import shared top bar styles */
+@import url('topbar.css');
+
+/* 1. Define shared colour and typography variables */
+:root {
+  --bg-color: #171516;           /* Dark purple background */
+  --text-color: #FFFFFF;         /* White text */
+  --link-hover-color: #BB86FC;   /* Lighter purple for hover */
+  --menu-font-family: 'Poppins', sans-serif;
+  --menu-font-size: 0.8rem;
+}
+
+/* 2. Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 3. Body Styles */
+body {
+  font-family: var(--menu-font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+/* 4. Container for layout */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* 6. Main Content */
+.main-content {
+  padding: 4rem 0;
+}
+
+/* 7. About Section */
+.about-section h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* 8. Footer */
+footer {
+  padding: 2rem 0;
+  text-align: center;
+  background-color: var(--bg-color);
+}

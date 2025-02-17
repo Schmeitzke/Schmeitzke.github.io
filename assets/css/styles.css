@@ -6,7 +6,6 @@
   --text-color: #FFFFFF;                /* Default text color (white) */
   --link-hover-color: #BB86FC;          /* Lighter purple for hover effect */
   --square-color: #45345e;              /* Color of the purple square */
-  --translucent-square-color: rgba(251, 251, 251, 0.37); /* Foggy white */
   --colour-camiel: #7d38eb;             /* Accent color for "Camiel" */
   --big-background-text: #1d1721;       /* Dark text for big background text */
   --menu-font-family: 'Poppins', sans-serif;
@@ -94,11 +93,11 @@ nav ul li a:hover {
 /* 10. Purple Square (Viewport-based) */
 .purple-square {
   position: absolute;
-  top: 40%;          /* Adjusted from 550vh */
-  left: 65vw;          /* 65% -> 65vw */
-  transform: translate(-50%, -50%);
-  width: 40vw;         /* Replaces 700px with a ratio-based approach */
-  height: 30vw;        /* Keep it square, same ratio as width */
+  bottom: 25%;                /* Anchor to 10% above the bottom of .hero */
+  left: 65vw;                 /* Same horizontal positioning as before */
+  transform: translateX(-50%); /* Only shift horizontally to center on left: 65vw */
+  width: 40vw;
+  height: 30vw;
   background-color: var(--square-color);
   z-index: 2;
 }
@@ -155,11 +154,11 @@ nav ul li a:hover {
 /* 12. Torso Photo */
 .torso-photo {
   position: absolute;
-  top: 40%;  /* Adjusted from 469vh */
-  left: 65vw;  /* 65% -> 65vw */
-  transform: translate(-50%, -50%);
-  width: 35vw;  /* Replaces 850px with a ratio-based approach */
-  height: 35vw; /* Keep it square, matching original ratio */
+  bottom: 25%;               /* Same bottom anchor as .purple-square */
+  left: 65vw;                
+  transform: translateX(-50%);
+  width: 40vw;               /* Slightly smaller or larger as needed */
+  height: 40vw;              /* Keep it square */
   z-index: 3;
   pointer-events: none;
 }

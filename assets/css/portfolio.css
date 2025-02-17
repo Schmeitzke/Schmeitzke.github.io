@@ -1,0 +1,126 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* 1. Define shared variables */
+:root {
+  --bg-color: #171516;
+  --text-color: #FFFFFF;
+  --link-hover-color: #BB86FC;
+  --menu-font-family: 'Poppins', sans-serif;
+  --menu-font-size: 0.8rem;
+  --tile-color: #000000; /* initial grey for tiles */
+  --tile-title-color: #7d38eb; /* modify as needed */
+  --tile-description-color: #b1a3a3; /* modify as needed */
+}
+
+/* 2. Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 3. Body Styles */
+body {
+  font-family: var(--menu-font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+/* 6. Main Content */
+.main-content {
+  padding: 5% 0;
+}
+
+/* 9. Footer */
+footer {
+  padding: 3% 0;
+  text-align: center;
+  background-color: var(--bg-color);
+}
+
+/* --- Grid System for Tiles --- */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2%;           /* gap between tiles in percentage */
+  width: 90%;        /* container width in percentage */
+  margin: 0 auto;    /* center the grid container */
+}
+
+.tile {
+  background-color: var(--tile-color);
+  /* Ensure each tile remains a square */
+  aspect-ratio: 1;
+  border-radius: 20px; /* Rounded corners */
+  position: relative;  /* Added for absolute positioning of child elements */
+}
+
+/* New styles for tile title and description */
+.tile-title {
+  font-size: 1.2rem;
+  color: var(--tile-title-color);
+  margin: 10px;
+}
+
+.tile-description {
+  font-size: 0.9rem;
+  color: var(--tile-description-color);
+  margin: 10px;
+}
+
+/* Updated styles for GitHub link element in tiles */
+.github-link {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  /* Remove previous margin and text-align */
+  /* Center the logo within its container if needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.github-link p {
+  font-size: 0.9rem;
+  color: var(--tile-description-color);
+}
+
+.github-link a img {
+  width: 48px; /* Increased size */
+  background: transparent; /* Ensure transparent background */
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.github-link a img:hover {
+  transform: scale(1.1);
+}
+
+/* New styles for tile status markings */
+.tile-status {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* Static red marking (finished) */
+.tile-status.finished {
+  background-color: red;
+}
+
+/* Glowing, flickering green marking (in progress) */
+.tile-status.in-progress {
+  background-color: green;
+  animation: flicker 3s infinite;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}

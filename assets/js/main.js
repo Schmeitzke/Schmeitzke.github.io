@@ -1,4 +1,4 @@
-// assets/js/main.js
+// File: assets/js/main.js
 
 document.addEventListener('DOMContentLoaded', function () {
   // Add a shadow to the header when scrolling

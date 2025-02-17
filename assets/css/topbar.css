@@ -1,0 +1,70 @@
+/* File: assets/css/topbar.css */
+
+/* (Optional) Import fonts and define the same root variables used across the site */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --bg-color: #171516;
+  --text-color: #FFFFFF;
+  --link-hover-color: #BB86FC;
+  --menu-font-family: 'Poppins', sans-serif;
+  --menu-font-size: 0.8rem;
+  --topbar-height: 5rem; /* Fixed height of the topbar */
+}
+
+/* 1. Body offset so the topbar doesn’t overlap content */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--menu-font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding-top: var(--topbar-height); /* Push content below the fixed topbar */
+}
+
+/* 2. Fixed Topbar */
+.top-bar {
+  background-color: var(--bg-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--topbar-height);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+/* 3. Container for the nav */
+.top-bar .container {
+  width: 100%;
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* 4. Nav Menu Layout */
+.top-bar nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* 5. Nav Links */
+.top-bar nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: var(--menu-font-size);
+  transition: color 0.3s ease;
+}
+
+/* Hover and Active States */
+.top-bar nav ul li a:hover {
+  color: var(--link-hover-color);
+}
+.top-bar nav ul li a.active {
+  font-weight: bold;
+}
