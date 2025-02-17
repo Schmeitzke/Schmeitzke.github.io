@@ -13,6 +13,14 @@
   --menu-options-color: var(--text-color);
 }
 
+/* New scaling container to maintain positions while scaling dynamically */
+.scale-wrapper {
+  width: 100%; /* Set this to your design’s base width */
+  margin: 0 auto;
+  transform-origin: top left;
+  transform: scale(calc(100vw / 1920));
+}
+
 /* 2. Global Reset */
 * {
   margin: 0;
@@ -71,28 +79,28 @@ nav ul li a:hover {
   color: var(--link-hover-color);
 }
 
-/* 8. Hero Section */
+/* 8. Hero Section – Revised for proportional scaling on large screens */
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh; /* Adjusted for a full viewport height */
+  height: calc(100vw * 0.5625);
 }
 
 /* 9. Big Background Text */
 .big-background-text {
   position: absolute;
-  top: 40%;    
-  left: 10vw;     
-  transform: translate(0, -50%);
-  font-size: 15vw; /* Scales with viewport width */
+  bottom: calc(25% + 15vw);  /* Anchor so its center aligns with purple square's center */
+  left: 10vw;
+  transform: translate(0, 50%); /* Shifts element to center vertically at the anchored point */
+  font-size: 15vw;             /* Responsive font sizing */
   color: var(--big-background-text);
-  z-index: 1; /* Behind squares and photo */
+  z-index: 1;                 /* Positioned behind the squares and photo */
 }
 
 /* 10. Purple Square */
 .purple-square {
   position: absolute;
-  bottom: 25%;                /* Anchor above the bottom of .hero */
+  bottom: calc(15% + 4vw);
   left: 65vw;                 
   transform: translateX(-50%); /* Center horizontally relative to left: 65vw */
   width: 40vw;
@@ -101,49 +109,38 @@ nav ul li a:hover {
   z-index: 2;
 }
 
-/* 11. Translucent Square */
+/* 11. Translucent Square – Revised for larger screens */
 .translucent-square {
   position: absolute;
-  top: 40%;          
-  left: 35vw;          
+  bottom: calc(5% + 4vw);
+  left: 35vw;
   transform: translate(-50%, -50%);
-  width: 28vw;       
-  height: 22vw;      
+  width: 28vw;
+  height: 22vw;
   background-color: transparent;
   backdrop-filter: blur(15px);
   border: 1px solid #ffffff42;
   z-index: 3;
 }
 
-/* Text inside the translucent square */
-.translucent-square .blurry-square-text {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: translate(0, -50%);
-  text-align: left;
-}
-
-.translucent-square .blurry-square-text .line {
-  margin: 0 0 1rem 0;
-  font-size: 4rem;
-  color: var(--text-color);
-}
-
+/* Text inside the translucent square – Revised for scalable font sizing on large screens */
 .translucent-square .blurry-square-text .line-1 {
-  font-size: 1.5rem; /* Smaller text for greeting */
+  font-size: 2.7vw; /* ~24px at 1920px width */
   font-weight: 300;
 }
+
 .translucent-square .blurry-square-text .line-2 {
-  font-size: 3rem; /* Larger text for introduction */
+  font-size: 4.2vw; /* ~48px at 1920px width */
   font-weight: 500;
 }
+
 .translucent-square .blurry-square-text .line-3 {
-  font-size: 3rem; /* Emphasized name */
+  font-size: 4.3vw; /* ~48px at 1920px width */
   font-weight: bold;
 }
+
 .translucent-square .blurry-square-text .line-4 {
-  font-size: 1.5rem; /* Medium-sized description */
+  font-size: 2.7vw; /* ~24px at 1920px width */
   font-weight: 100;
 }
 .translucent-square .blurry-square-text span {
@@ -166,59 +163,4 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-/* Mobile-specific styles */
-@media screen and (max-width: 768px) {
-  /* Hide non-essential elements for mobile view */
-  .big-background-text,
-  .purple-square,
-  .torso-photo {
-    display: none;
-  }
-
-  /* Update hero placement to let page height adjust automatically */
-  .hero {
-    height: auto;
-    display: flex;
-    align-items: flex-start; /* changed from center */
-    justify-content: center;
-    padding-top: 2rem; /* adjust as needed */
-  }
-
-  /* Reposition and resize the translucent square for small screens */
-  .translucent-square {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: none;
-    width: 90%;        /* Increase width to fill most of the screen */
-    height: auto;      /* Let height adjust based on content */
-    padding: 2rem;     /* Add padding for inner spacing */
-    margin: 0 auto;
-  }
-
-  /* Adjust text positioning inside the translucent square */
-  .translucent-square .blurry-square-text {
-    position: static;
-    transform: none;
-    text-align: center;
-  }
-
-  /* Make text dynamic using clamp() for responsive font sizing */
-  .translucent-square .blurry-square-text .line-1 {
-    font-size: clamp(0.8rem, 4vw, 1.5rem);
-  }
-  .translucent-square .blurry-square-text .line-2 {
-    font-size: clamp(1rem, 6vw, 2.5rem);
-  }
-  .translucent-square .blurry-square-text .line-3 {
-    font-size: clamp(1rem, 6vw, 2.5rem);
-  }
-  .translucent-square .blurry-square-text .line-4 {
-    font-size: clamp(0.8rem, 4vw, 1.5rem);
-  }
-  .translucent-square .blurry-square-text .line {
-    margin-bottom: 1rem;
-  }
 }
