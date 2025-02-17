@@ -35,6 +35,12 @@ body {
   padding: 0 1rem;
 }
 
+@media (max-width: 600px) {
+  .container {
+    padding: 0 1.5rem !important;
+  }
+}
+
 /* Main Content Padding */
 .main-content {
   padding: 4rem 0;
