@@ -177,12 +177,13 @@ nav ul li a:hover {
     display: none;
   }
 
-  /* Ensure the hero section centers the translucent square */
+  /* Update hero placement to let page height adjust automatically */
   .hero {
-    height: 100vh;
+    height: auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* changed from center */
     justify-content: center;
+    padding-top: 2rem; /* adjust as needed */
   }
 
   /* Reposition and resize the translucent square for small screens */

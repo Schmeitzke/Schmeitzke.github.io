@@ -128,11 +128,11 @@ body {
   /* .menu overrides */
   .menu {
     position: fixed;
-    top: 25%;
+    top: 18%;
     right: 0;
     left: auto;
-    width: 60%;
-    height: 32%;
+    width: auto;       /* changed from fixed width */
+    height: auto;      /* changed from fixed height */
     background: #333333;
     z-index: 9999;
     border-radius: 20px;
@@ -140,6 +140,8 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
+    white-space: nowrap; /* enables shrinkwrapping */
+    padding: 1rem;     /* adjust padding as needed */
   }
 
   .menu.open {
