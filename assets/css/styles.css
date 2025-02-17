@@ -203,7 +203,8 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-size: clamp(1rem, 1vw, 1rem); /* Font size scales with button size */
+  /* Expanded clamp range for more extreme font scaling */
+  font-size: clamp(0.3rem, 2.5vw, 2rem); /* Font size scales with button size */
   /* Adjust aspect ratio to be less tall */
   aspect-ratio: 2;
   transition: background-color 0.3s ease;
