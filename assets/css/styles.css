@@ -3,16 +3,20 @@
 
 /* 1. Define color variables */
 :root {
-  --bg-color: #171516;                  /* Dark purple background */
-  --text-color: #FFFFFF;                /* Default text color (white) */
-  --link-hover-color: #BB86FC;          /* Lighter purple for hover effect */
-  --square-color: #45345e;              /* Color of the purple square */
-  --colour-camiel: #7d38eb;             /* Accent color for "Camiel" */
-  --big-background-text: #2c2332;       /* Dark text for big background text */
+  --bg-color: #dddddd;
+  --text-color: #7b7b7b;
+  --link-hover-color: #b7f5bb;
+  --square-color: #97db9b6c;
+  --colour-camiel: #97db9b;
+  --big-background-text: #c0bfbf41;
   --menu-font-family: 'Poppins', sans-serif;
   --menu-font-size: 0.8rem;
   --menu-options-color: var(--text-color);
+
+  /* Shared bottom offset for both the purple square and the torso photo */
+  --shared-bottom: calc(15% + 4vw);
 }
+
 
 /* New scaling container to maintain positions while scaling dynamically */
 .scale-wrapper {
@@ -102,10 +106,10 @@ nav ul li a:hover {
 /* 10. Purple Square */
 .purple-square {
   position: absolute;
-  bottom: calc(15% + 4vw);
-  left: 65vw;                 
-  transform: translateX(-50%); /* Center horizontally relative to left: 65vw */
-  width: 40vw;
+  bottom: var(--shared-bottom);
+  left: 65vw;
+  transform: translateX(-50%);
+  width: 35vw;
   height: 30vw;
   background-color: var(--square-color);
   z-index: 2;
@@ -158,18 +162,18 @@ nav ul li a:hover {
 /* 12. Torso Photo */
 .torso-photo {
   position: absolute;
-  bottom: 25%;               
-  left: 65vw;                
+  bottom: var(--shared-bottom);
+  left: 65vw;
   transform: translateX(-50%);
-  width: 40vw;               
-  height: 40vw;              
   z-index: 3;
   pointer-events: none;
 }
 
 .torso-photo img {
-  width: 100%;
-  height: 100%;
+  display: block;
+  /* Decrease width to make the image smaller, while maintaining bottom alignment */
+  width: 22vw;  
+  height: auto;
   object-fit: contain;
 }
 

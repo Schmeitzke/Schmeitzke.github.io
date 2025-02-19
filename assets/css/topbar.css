@@ -4,9 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 :root {
-  --bg-color: #171516;
-  --text-color: #FFFFFF;
-  --link-hover-color: #BB86FC;
+  --bg-color: #dddddd;
+  --text-color: #7b7b7b;
+  --link-hover-color: #b7f5bb;
   --menu-font-family: 'Poppins', sans-serif;
   --menu-font-size: 0.8rem;
   --topbar-height: 5rem; /* Fixed height of the topbar */

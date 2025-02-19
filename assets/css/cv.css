@@ -4,9 +4,9 @@
 
 /* Define shared variables */
 :root {
-  --bg-color: #171516;
-  --text-color: #FFFFFF;
-  --accent-color: #BB86FC;
+  --bg-color: #dddddd;
+  --text-color: #7b7b7b;
+  --accent-color: #8acb8f;  /* updated to match new link-hover colour */
   --font-family: 'Poppins', sans-serif;
   --header-font-size: 2.5rem;
   --subheader-font-size: 1.8rem;

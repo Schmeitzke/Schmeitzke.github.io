@@ -4,14 +4,14 @@
 
 /* 1. Define shared variables */
 :root {
-  --bg-color: #171516;
-  --text-color: #FFFFFF;
-  --link-hover-color: #BB86FC;
+  --bg-color: #dddddd;
+  --text-color: #7b7b7b;
+  --link-hover-color: #b7f5bb;
   --menu-font-family: 'Poppins', sans-serif;
   --menu-font-size: 0.8rem;
-  --tile-color: #000000; /* initial grey for tiles */
-  --tile-title-color: #7d38eb; /* modify as needed */
-  --tile-description-color: #b1a3a3; /* modify as needed */
+  --tile-color: #97db9b6c; /* initial grey for tiles */
+  --tile-title-color: #4c6e4e; /* modify as needed */
+  --tile-description-color: #1e3d21; /* modify as needed */
 }
 
 /* 2. Global Reset */
@@ -130,7 +130,7 @@ footer {
 /* Glowing, flickering green marking (in progress) */
 .tile-status.in-progress {
   background-color: green;
-  animation: flicker 3s infinite;
+  animation: flicker 2s infinite;
 }
 
 @keyframes flicker {

@@ -4,9 +4,9 @@
 
 /* Define shared variables to match the CV page */
 :root {
-  --bg-color: #171516;
-  --text-color: #FFFFFF;
-  --accent-color: #BB86FC;
+  --bg-color: #dddddd;
+  --text-color: #7b7b7b;
+  --accent-color: #8acb8f;
   --font-family: 'Poppins', sans-serif;
   --header-font-size: 2.5rem;
   --body-font-size: 1rem;
@@ -63,6 +63,13 @@ body {
 .contact-section .intro {
   font-size: 1.1rem;
   margin-bottom: 2rem;
+}
+
+/* LinkedIn link styling */
+.contact-section .linkedin-link img {
+  width: 4%;
+  height: auto;
+  margin-top: 1rem;
 }
 
 /* Contact Form Styles */
