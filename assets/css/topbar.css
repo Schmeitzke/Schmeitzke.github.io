@@ -133,7 +133,7 @@ body {
     left: auto;
     width: auto;       /* changed from fixed width */
     height: auto;      /* changed from fixed height */
-    background: #333333;
+    background: #97db9b;
     z-index: 9999;
     border-radius: 20px;
     display: none;
@@ -169,20 +169,17 @@ body {
   /* Make sure anchor tags don’t add extra spacing */
   .menu ul li a {
     display: block;
-    background: #444;
+    background: #6fa172;
     padding: 0.5rem 1rem;
     border-radius: 8px;
     text-align: center;
-    margin: 0 !important;
     text-decoration: none;
-    transition: background 0.3s ease;
-    color: #fff;
+    color: #0a0a0a !important;
     font-size: 1rem;
-    /* Reduce line-height to remove any extra text spacing */
     line-height: 1;
   }
 
   .menu ul li a:hover {
-    background: #555;
+    background: #989898;
   }
 }
