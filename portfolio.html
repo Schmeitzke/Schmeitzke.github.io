@@ -3,60 +3,233 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Camiel Schmeitz Portfolio</title>
-  <!-- 1) Link to topbar.css first -->
+  <title>Projects | Camiel Schmeitz</title>
+  <!-- Modern icon for the site -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS files -->
   <link rel="stylesheet" href="assets/css/topbar.css" />
-  <!-- 2) Then link the shared styles.css (as in the About page) -->
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <!-- 3) Then link the page-specific CSS (portfolio.css) -->
-  <link rel="stylesheet" href="assets/css/portfolio.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
 </head>
 <body>
-  <!-- Topbar placeholder -->
-  <div id="topbar-placeholder"></div>
+  <!-- Modern Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">Camiel<span>Schmeitz</span></a>
+      <nav class="nav">
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="portfolio.html" class="nav-link active">Projects</a></li>
+          <li><a href="cv.html" class="nav-link">CV</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="overlay"></div>
   
-  <!-- Main Content -->
-  <div class="main-content">
-    <div class="tile-grid">
-      <!-- Financial Sentiment LLM (private repo, in progress) -->
-      <div class="tile">
-        <h2 class="tile-title">Financial Sentiment LLM</h2>
-        <p class="tile-description">I have been part of a three-person team developing an AI-driven financial system that integrates advanced language models for real-time market insights. We built a full-stack platform with a custom training pipeline, real-time data processing, a React interface, and a Django backend.&#x20;
-        </p>
-        <div class="github-link">
-          <p>Private Repo</p>
+  <!-- Page Header -->
+  <section class="section page-header py-8">
+    <div class="container">
+      <h1 class="slide-up">My Projects</h1>
+      <p class="lead slide-up delay-100">Explore my work in AI, machine learning, and data science</p>
+    </div>
+  </section>
+  
+  <!-- Projects Section -->
+  <section class="section projects-section py-12">
+    <div class="container">
+      <div class="projects-grid grid">
+        <!-- Financial Sentiment LLM -->
+        <div class="card project-card slide-up">
+          <div class="card-body">
+            <div class="project-header">
+              <h3 class="card-title">Financial Sentiment LLM</h3>
+              <div class="project-status">
+                <span class="status-badge in-progress">In Progress</span>
+                <span class="status-badge private">Private Repo</span>
+              </div>
+            </div>
+            
+            <p class="project-desc">I have been part of a three-person team developing an AI-driven financial system that integrates advanced language models for real-time market insights. We built a full-stack platform with a custom training pipeline, real-time data processing, a React interface, and a Django backend.</p>
+            
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">PyTorch</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Django</span>
+              <span class="tech-tag">LLM</span>
+            </div>
+          </div>
         </div>
-        <div class="tile-status in-progress">In Progress</div>
-      </div>
-      <!-- Deep Research (open source repo, finished) -->
-      <div class="tile">
-        <h2 class="tile-title">Deep Research</h2>
-        <p class="tile-description">This is an independently developed open-source deep-research system, inspired by OpenAI Deep-Research. It began as a fork of an existing open-source repository, but I have extensively improved it. I redesigned the API call system, optimized performance, enhanced accuracy, and refined document formatting for more structured outputs.
-        </p>
-        <div class="github-link">
-          <a href="https://github.com/Schmeitzke/deep-research-py" target="_blank">
-            <img src="images\github-logo.png" alt="GitHub Repo" />
-          </a>
+        
+        <!-- Deep Research -->
+        <div class="card project-card slide-up delay-100">
+          <div class="card-body">
+            <div class="project-header">
+              <h3 class="card-title">Deep Research</h3>
+              <div class="project-status">
+                <span class="status-badge in-progress">In Progress</span>
+              </div>
+            </div>
+            
+            <p class="project-desc">This is an independently developed open-source deep-research system, inspired by OpenAI Deep-Research. It began as a fork of an existing open-source repository, but I have extensively improved it. I redesigned the API call system, optimized performance, enhanced accuracy, and refined document formatting for more structured outputs.</p>
+            
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">API Integration</span>
+              <span class="tech-tag">NLP</span>
+              <span class="tech-tag">Document Processing</span>
+            </div>
+            
+            <div class="project-links mt-4">
+              <a href="https://github.com/Schmeitzke/deep-research-py" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="tile-status in-progress">In Progress</div>
-      </div>
-      <!-- Your Project Here? (private repo, in progress) -->
-      <div class="tile">
-        <h2 class="tile-title">Your Project Here?</h2>
-        <p class="tile-description">Get in contact!</p>
+        
+        <!-- Future Project -->
+        <div class="card project-card slide-up delay-200">
+          <div class="card-body">
+            <div class="project-header">
+              <h3 class="card-title">Your Project Here?</h3>
+            </div>
+            
+            <p class="project-desc">I'm always open to new collaborations and projects. If you have an idea for a project related to AI, machine learning, or data science, I'd love to discuss how we can work together to bring it to life.</p>
+            
+            <div class="project-links mt-4">
+              <a href="contact.html" class="project-link">
+                <i class="fas fa-envelope"></i> Get in Contact
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+  
+  <!-- Skills Section -->
+  <section class="section skills-overview-section py-12">
+    <div class="container">
+      <h2 class="section-title slide-up">Technology Stack</h2>
+      <div class="skills-overview-grid slide-up delay-100">
+        <div class="skill-category">
+          <h3>Languages</h3>
+          <div class="skills-list">
+            <span class="skill-item">Python</span>
+            <span class="skill-item">JavaScript</span>
+            <span class="skill-item">TypeScript</span>
+            <span class="skill-item">SQL</span>
+            <span class="skill-item">Java</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>AI & ML</h3>
+          <div class="skills-list">
+            <span class="skill-item">PyTorch</span>
+            <span class="skill-item">LLM Training</span>
+            <span class="skill-item">Huggingface</span>
+            <span class="skill-item">Data Cleaning</span>
+            <span class="skill-item">NLP</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Web Development</h3>
+          <div class="skills-list">
+            <span class="skill-item">React</span>
+            <span class="skill-item">Django</span>
+            <span class="skill-item">REST API</span>
+            <span class="skill-item">MySQL</span>
+            <span class="skill-item">Git</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="section cta-section py-16">
+    <div class="container">
+      <div class="cta-content text-center slide-up">
+        <h2>Interested in Working Together?</h2>
+        <p class="mb-4">Reach out to discuss your project ideas or potential collaborations</p>
+        <a href="contact.html" class="btn btn-primary">Contact Me</a>
+      </div>
+    </div>
+  </section>
   
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Camiel Schmeitz. All rights reserved.</p>
+      <div class="footer-content">
+        <div class="footer-logo">Camiel<span>Schmeitz</span></div>
+        <div class="footer-social">
+          <a href="https://github.com/Schmeitzke" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/camielschmeitz/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="copyright">&copy; 2025 Camiel Schmeitz. All rights reserved.</p>
+      </div>
     </div>
   </footer>
   
-  <!-- JavaScript Files -->
-  <script src="assets/js/topbar.js"></script>
-  <script src="assets/js/main.js"></script>
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navList = document.querySelector('.nav-list');
+      const overlay = document.querySelector('.overlay');
+      
+      if (menuToggle && navList && overlay) {
+        menuToggle.addEventListener('click', function() {
+          menuToggle.classList.toggle('active');
+          navList.classList.toggle('active');
+          overlay.classList.toggle('active');
+          document.body.classList.toggle('no-scroll');
+        });
+        
+        overlay.addEventListener('click', function() {
+          menuToggle.classList.remove('active');
+          navList.classList.remove('active');
+          overlay.classList.remove('active');
+          document.body.classList.remove('no-scroll');
+        });
+      }
+      
+      // Header scroll effect
+      const header = document.querySelector('.header');
+      let lastScrollY = window.scrollY;
+      
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+          header.classList.add('scrolled');
+          
+          // Hide header on scroll down, show on scroll up
+          if (window.scrollY > lastScrollY) {
+            header.classList.add('hidden');
+          } else {
+            header.classList.remove('hidden');
+          }
+        } else {
+          header.classList.remove('scrolled');
+        }
+        
+        lastScrollY = window.scrollY;
+      });
+    });
+  </script>
 </body>
 </html>

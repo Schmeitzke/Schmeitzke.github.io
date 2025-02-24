@@ -3,124 +3,262 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Camiel Schmeitz - Curriculum Vitae</title>
-  <!-- Link shared topbar styles -->
+  <title>CV | Camiel Schmeitz</title>
+  <!-- Modern icon for the site -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS files -->
   <link rel="stylesheet" href="assets/css/topbar.css" />
-  <!-- Added shared styles.css to match portfolio -->
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <!-- Link the page-specific CV styles -->
-  <link rel="stylesheet" href="assets/css/cv.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
 </head>
 <body>
-  <!-- Topbar placeholder injected by topbar.js -->
-  <div id="topbar-placeholder"></div>
-  
-  <!-- Main Content -->
-  <main class="container main-content">
-    <!-- Header Section with Name, Title, and Contact Information -->
-    <header class="cv-header">
-      <h1>Camiel Schmeitz</h1>
-      <h2>DATA SCIENCE AND AI DEVELOPER</h2>
-      <p class="contact-info">
-        <span>camielschmeitz@gmail.com</span> | 
-        <span>+31637557073</span>
-      </p>
-    </header>
-    
-    <!-- Experience Section -->
-    <section class="cv-section">
-      <h2>Experience</h2>
-      <!-- Experience Item 1 -->
-      <div class="experience-item">
-        <h3>Back-End Developer with Front-End Knowledge (Freelance)</h3>
-        <span class="date-range">June 2024 - Now</span>
-        <p>
-          Collaborated on the development of an advanced AI-driven analytics platform, focusing on machine learning model creation, data management, and full-stack application development to support automated decision-making processes on the options and futures market.
-        </p>
-      </div>
-      <!-- Experience Item 2 -->
-      <div class="experience-item">
-        <h3>Freelance Data Annotator and Red Teaming (Freelance)</h3>
-        <span class="date-range">October 2023 – June 2024</span>
-        <p>
-          Independent contractor for Outlier.ai, focusing on the assessment of large language models (LLMs) and annotation of training data.
-        </p>
-      </div>
-      <!-- Experience Item 3 -->
-      <div class="experience-item">
-        <h3>Early Career Experience</h3>
-        <span class="date-range">February 2018 – October 2023</span>
-        <p>
-          Worked as a warehouse employee at L.M. Meijers Bv, provided elderly care at Zuyderland's healthcare facilities, and served as a door-to-door sales representative for Duurzaam Verbond, promoting sustainable products.
-        </p>
-      </div>
-    </section>
-    
-    <!-- Education Section -->
-    <section class="cv-section">
-      <h2>Education</h2>
-      <!-- Education Item 1 -->
-      <div class="education-item">
-        <h3>Maastricht University</h3>
-        <span class="date-range">September 2020 – Now</span>
-        <ul>
-          <li>BSc Data Science and Artificial Intelligence</li>
-          <li>BSc Fiscal Economics (not graduated)</li>
+  <!-- Modern Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">Camiel<span>Schmeitz</span></a>
+      <nav class="nav">
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="portfolio.html" class="nav-link">Projects</a></li>
+          <li><a href="cv.html" class="nav-link active">CV</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
-      </div>
-      <!-- Education Item 2 -->
-      <div class="education-item">
-        <h3>Atheneum Trevianum Scholengroep</h3>
-        <span class="date-range">September 2013 – July 2020</span>
-      </div>
-    </section>
-    
-    <!-- Skills Section -->
-    <section class="cv-section">
-      <h2>Skills</h2>
-      <ul class="skills-list">
-        <li>Cython</li>
-        <li>Cross-Platform Development</li>
-        <li>Data Cleaning</li>
-        <li>Data Formatting</li>
-        <li>Database Management</li>
-        <li>Django</li>
-        <li>Django ORM</li>
-        <li>Git</li>
-        <li>GitHub Workflow</li>
-        <li>Git LFS</li>
-        <li>Huggingface</li>
-        <li>Java</li>
-        <li>LLM Training</li>
-        <li>Multithreading</li>
-        <li>MySQL</li>
-        <li>PyTorch</li>
-        <li>Project Management</li>
-        <li>Python</li>
-        <li>React</li>
-        <li>REST API</li>
-        <li>Shell Scripting</li>
-        <li>Web Scraping</li>
-        <li>SQL</li>
-        <li>Typescript</li>
-      </ul>
-    </section>
-    
-    <!-- Download Button -->
-    <div class="cv-download">
-      <a class="download-btn" href="assets\Camiel_CV.pdf" target="_blank">Download PDF</a>
+      </nav>
     </div>
-  </main>
+  </header>
+  <div class="overlay"></div>
   
-  <!-- Footer Section -->
+  <!-- Page Header -->
+  <section class="section page-header py-8">
+    <div class="container">
+      <h1 class="slide-up">Curriculum Vitae</h1>
+      <p class="lead slide-up delay-100">Data Science & AI Developer</p>
+    </div>
+  </section>
+  
+  <!-- CV Content -->
+  <section class="section cv-section py-12">
+    <div class="container">
+      <div class="cv-grid">
+        <!-- Main Content -->
+        <div class="cv-main slide-up">
+          <!-- Experience Section -->
+          <div class="cv-block">
+            <h2 class="cv-block-title">
+              <i class="fas fa-briefcase"></i> Experience
+            </h2>
+            
+            <!-- Experience Item 1 -->
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <h3>Back-End Developer with Front-End Knowledge</h3>
+                <span class="cv-date">June 2024 - Present</span>
+              </div>
+              <div class="cv-company">Freelance</div>
+              <p class="cv-description">
+                Collaborated on the development of an advanced AI-driven analytics platform, focusing on machine learning model creation, data management, and full-stack application development to support automated decision-making processes on the options and futures market.
+              </p>
+            </div>
+            
+            <!-- Experience Item 2 -->
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <h3>Freelance Data Annotator and Red Teaming</h3>
+                <span class="cv-date">October 2023 – June 2024</span>
+              </div>
+              <div class="cv-company">Outlier.ai</div>
+              <p class="cv-description">
+                Independent contractor focusing on the assessment of large language models (LLMs) and annotation of training data.
+              </p>
+            </div>
+            
+            <!-- Experience Item 3 -->
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <h3>Early Career Experience</h3>
+                <span class="cv-date">February 2018 – October 2023</span>
+              </div>
+              <div class="cv-company">Various Companies</div>
+              <p class="cv-description">
+                Worked as a warehouse employee at L.M. Meijers Bv, provided elderly care at Zuyderland's healthcare facilities, and served as a door-to-door sales representative for Duurzaam Verbond, promoting sustainable products.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Education Section -->
+          <div class="cv-block">
+            <h2 class="cv-block-title">
+              <i class="fas fa-graduation-cap"></i> Education
+            </h2>
+            
+            <!-- Education Item 1 -->
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <h3>BSc Data Science and Artificial Intelligence</h3>
+                <span class="cv-date">September 2020 – Present</span>
+              </div>
+              <div class="cv-company">Maastricht University</div>
+            </div>
+            
+            <!-- Education Item 2 -->
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <h3>BSc Fiscal Economics (not graduated)</h3>
+                <span class="cv-date">September 2020 – 2022</span>
+              </div>
+              <div class="cv-company">Maastricht University</div>
+            </div>
+            
+            <!-- Education Item 3 -->
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <h3>Secondary Education</h3>
+                <span class="cv-date">September 2013 – July 2020</span>
+              </div>
+              <div class="cv-company">Atheneum Trevianum Scholengroep</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="cv-sidebar slide-up delay-100">
+          <!-- Contact Info -->
+          <div class="cv-block">
+            <h2 class="cv-block-title">
+              <i class="fas fa-address-card"></i> Contact
+            </h2>
+            <ul class="cv-contact-list">
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:camielschmeitz@gmail.com">camielschmeitz@gmail.com</a>
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+31637557073">+31 637557073</a>
+              </li>
+              <li>
+                <i class="fab fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/camielschmeitz/" target="_blank">LinkedIn Profile</a>
+              </li>
+              <li>
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/Schmeitzke" target="_blank">GitHub Profile</a>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Skills -->
+          <div class="cv-block">
+            <h2 class="cv-block-title">
+              <i class="fas fa-code"></i> Skills
+            </h2>
+            <div class="cv-skills">
+              <span class="cv-skill">Cython</span>
+              <span class="cv-skill">Cross-Platform Development</span>
+              <span class="cv-skill">Data Cleaning</span>
+              <span class="cv-skill">Data Formatting</span>
+              <span class="cv-skill">Database Management</span>
+              <span class="cv-skill">Django</span>
+              <span class="cv-skill">Django ORM</span>
+              <span class="cv-skill">Git</span>
+              <span class="cv-skill">GitHub Workflow</span>
+              <span class="cv-skill">Git LFS</span>
+              <span class="cv-skill">Huggingface</span>
+              <span class="cv-skill">Java</span>
+              <span class="cv-skill">LLM Training</span>
+              <span class="cv-skill">Multithreading</span>
+              <span class="cv-skill">MySQL</span>
+              <span class="cv-skill">PyTorch</span>
+              <span class="cv-skill">Project Management</span>
+              <span class="cv-skill">Python</span>
+              <span class="cv-skill">React</span>
+              <span class="cv-skill">REST API</span>
+              <span class="cv-skill">Shell Scripting</span>
+              <span class="cv-skill">Web Scraping</span>
+              <span class="cv-skill">SQL</span>
+              <span class="cv-skill">Typescript</span>
+            </div>
+          </div>
+          
+          <!-- Download CV -->
+          <div class="cv-block">
+            <a href="assets/Camiel_CV.pdf" target="_blank" class="btn btn-primary btn-download">
+              <i class="fas fa-download"></i> Download PDF
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Camiel Schmeitz. All rights reserved.</p>
+      <div class="footer-content">
+        <div class="footer-logo">Camiel<span>Schmeitz</span></div>
+        <div class="footer-social">
+          <a href="https://github.com/Schmeitzke" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/camielschmeitz/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="copyright">&copy; 2025 Camiel Schmeitz. All rights reserved.</p>
+      </div>
     </div>
   </footer>
   
-  <!-- JavaScript Files -->
-  <script src="assets/js/topbar.js"></script>
-  <script src="assets/js/main.js"></script>
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navList = document.querySelector('.nav-list');
+      const overlay = document.querySelector('.overlay');
+      
+      if (menuToggle && navList && overlay) {
+        menuToggle.addEventListener('click', function() {
+          menuToggle.classList.toggle('active');
+          navList.classList.toggle('active');
+          overlay.classList.toggle('active');
+          document.body.classList.toggle('no-scroll');
+        });
+        
+        overlay.addEventListener('click', function() {
+          menuToggle.classList.remove('active');
+          navList.classList.remove('active');
+          overlay.classList.remove('active');
+          document.body.classList.remove('no-scroll');
+        });
+      }
+      
+      // Header scroll effect
+      const header = document.querySelector('.header');
+      let lastScrollY = window.scrollY;
+      
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+          header.classList.add('scrolled');
+          
+          // Hide header on scroll down, show on scroll up
+          if (window.scrollY > lastScrollY) {
+            header.classList.add('hidden');
+          } else {
+            header.classList.remove('hidden');
+          }
+        } else {
+          header.classList.remove('scrolled');
+        }
+        
+        lastScrollY = window.scrollY;
+      });
+    });
+  </script>
 </body>
 </html>

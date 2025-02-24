@@ -3,60 +3,193 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Camiel Schmeitz</title>
-  <meta http-equiv="refresh" content="0; url=cv.html" />
-  <!-- 1) Link to topbar.css first -->
+  <title>Camiel Schmeitz | Data Science & AI Developer</title>
+  <!-- Modern icon for the site -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS files -->
   <link rel="stylesheet" href="assets/css/topbar.css" />
-  <!-- 2) Then link the page-specific CSS (styles.css) -->
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
 </head>
 <body>
-  <noscript>
-    <p>If you are not redirected automatically, please <a href="cv.html">click here</a>.</p>
-  </noscript>
-  <!-- Added scaling wrapper -->
-  <div class="scale-wrapper">
-    <!-- Placeholder for topbar (injected by topbar.js) -->
-    <div id="topbar-placeholder"></div>
-    
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="big-background-text">
-        <p class="line line-1">ENGI</p>
-        <p class="line line-2">NEER</p>
-      </div>
-      <div class="purple-square"></div>
-      <div class="translucent-square">
-        <div class="blurry-square-text">
-          <h2 class="line line-1">Hi,</h2>
-          <h2 class="line line-2">my name is</h2>
-          <h2 class="line line-3"><span>Camiel</span></h2>
-          <h2 class="line line-4">ML Engineer</h2>
+  <!-- Modern Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">Camiel<span>Schmeitz</span></a>
+      <nav class="nav">
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="portfolio.html" class="nav-link">Projects</a></li>
+          <li><a href="cv.html" class="nav-link">CV</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="overlay"></div>
+  
+  <!-- Hero Section -->
+  <section class="section hero-section py-16">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="slide-up">Data Science & AI Developer</h1>
+        <p class="slide-up delay-100">I build intelligent solutions using machine learning, data analysis, and modern web technologies.</p>
+        <div class="hero-cta slide-up delay-200">
+          <a href="portfolio.html" class="btn btn-primary">View My Work</a>
+          <a href="cv.html" class="btn btn-outline">My Experience</a>
         </div>
       </div>
-      <div class="torso-photo">
-        <img src="images\Adobe Express - file (1).png" alt="Torso Photo" />
-      </div>
-    </section> <!-- End hero section -->
+    </div>
+  </section>
   
-    <!-- New 2x2 grid of page buttons -->
-    <section class="page-grid">
-      <a href="about.html" class="grid-square">About</a>
-      <a href="portfolio.html" class="grid-square">Portfolio</a>
-      <a href="cv.html" class="grid-square">CV</a>
-      <a href="contact.html" class="grid-square">Contact</a>
-    </section>
-    
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <p>&copy; 2025 Camiel Schmeitz. All rights reserved.</p>
+  <!-- Skills Section -->
+  <section class="section skills-section py-12">
+    <div class="container">
+      <h2 class="section-title slide-up">My Skills</h2>
+      <div class="skills-grid grid">
+        <div class="card slide-up delay-100">
+          <div class="card-body">
+            <i class="fas fa-brain fa-2x mb-4" style="color: var(--color-primary);"></i>
+            <h3 class="card-title">Machine Learning</h3>
+            <p>Custom model development, training pipelines, and data preprocessing.</p>
+          </div>
+        </div>
+        <div class="card slide-up delay-200">
+          <div class="card-body">
+            <i class="fas fa-code fa-2x mb-4" style="color: var(--color-primary);"></i>
+            <h3 class="card-title">Web Development</h3>
+            <p>Full-stack development with modern frameworks and responsive design.</p>
+          </div>
+        </div>
+        <div class="card slide-up delay-300">
+          <div class="card-body">
+            <i class="fas fa-database fa-2x mb-4" style="color: var(--color-primary);"></i>
+            <h3 class="card-title">Data Management</h3>
+            <p>Database design, data cleaning, and efficient data processing.</p>
+          </div>
+        </div>
       </div>
-    </footer>
-  </div>
+    </div>
+  </section>
   
-  <!-- JavaScript Files -->
-  <script src="assets/js/topbar.js"></script>
-  <script src="assets/js/main.js"></script>
+  <!-- Recent Projects Section -->
+  <section class="section projects-section py-12">
+    <div class="container">
+      <h2 class="section-title slide-up">Recent Projects</h2>
+      <div class="projects-grid grid">
+        <!-- Financial Sentiment LLM Project -->
+        <div class="card project-card slide-up delay-100">
+          <div class="card-body">
+            <h3 class="card-title">Financial Sentiment LLM</h3>
+            <p class="mb-4">AI-driven financial system with language models for real-time market insights.</p>
+            <div class="project-status">
+              <span class="status-badge in-progress">In Progress</span>
+              <span class="status-badge private">Private Repo</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Deep Research Project -->
+        <div class="card project-card slide-up delay-200">
+          <div class="card-body">
+            <h3 class="card-title">Deep Research</h3>
+            <p class="mb-4">Open-source deep-research system with enhanced API call system and optimized performance.</p>
+            <div class="project-links">
+              <a href="https://github.com/Schmeitzke/deep-research-py" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+            <div class="project-status">
+              <span class="status-badge in-progress">In Progress</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-8 slide-up delay-300">
+        <a href="portfolio.html" class="btn btn-outline">View All Projects</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="section cta-section py-16">
+    <div class="container">
+      <div class="cta-content text-center slide-up">
+        <h2>Let's Work Together</h2>
+        <p class="mb-4">Interested in collaborating on a project? Get in touch with me to discuss how we can work together.</p>
+        <a href="contact.html" class="btn btn-primary">Contact Me</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">Camiel<span>Schmeitz</span></div>
+        <div class="footer-social">
+          <a href="https://github.com/Schmeitzke" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/camielschmeitz/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="copyright">&copy; 2025 Camiel Schmeitz. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Add custom JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navList = document.querySelector('.nav-list');
+      const overlay = document.querySelector('.overlay');
+      
+      if (menuToggle && navList && overlay) {
+        menuToggle.addEventListener('click', function() {
+          menuToggle.classList.toggle('active');
+          navList.classList.toggle('active');
+          overlay.classList.toggle('active');
+          document.body.classList.toggle('no-scroll');
+        });
+        
+        overlay.addEventListener('click', function() {
+          menuToggle.classList.remove('active');
+          navList.classList.remove('active');
+          overlay.classList.remove('active');
+          document.body.classList.remove('no-scroll');
+        });
+      }
+      
+      // Header scroll effect
+      const header = document.querySelector('.header');
+      let lastScrollY = window.scrollY;
+      
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+          header.classList.add('scrolled');
+          
+          // Hide header on scroll down, show on scroll up
+          if (window.scrollY > lastScrollY) {
+            header.classList.add('hidden');
+          } else {
+            header.classList.remove('hidden');
+          }
+        } else {
+          header.classList.remove('scrolled');
+        }
+        
+        lastScrollY = window.scrollY;
+      });
+    });
+  </script>
 </body>
 </html>

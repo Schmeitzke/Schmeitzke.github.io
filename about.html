@@ -3,59 +3,214 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Camiel Schmeitz - About Me</title>
-  <!-- 1) Link to topbar.css first -->
+  <title>About | Camiel Schmeitz</title>
+  <!-- Modern icon for the site -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS files -->
   <link rel="stylesheet" href="assets/css/topbar.css" />
-  <!-- Add shared styles.css to ensure identical topbar styling -->
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <!-- 2) Then link the page-specific CSS (about.css) -->
-  <link rel="stylesheet" href="assets/css/about.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
 </head>
 <body>
-  <!-- Topbar placeholder injected by topbar.js -->
-  <div id="topbar-placeholder"></div>
+  <!-- Modern Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">Camiel<span>Schmeitz</span></a>
+      <nav class="nav">
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="portfolio.html" class="nav-link">Projects</a></li>
+          <li><a href="cv.html" class="nav-link">CV</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="overlay"></div>
   
-  <!-- Main Content -->
-  <main class="container main-content">
-    <section class="about-section">
-      <h1>About Me</h1>
-      <div class="about-text">
-        <p>
-          My academic journey began after graduating from middle school, leading me to enroll in <a href="https://www.maastrichtuniversity.nl/">Maastricht University</a> where I pursued studies in Fiscal Economics. For two years, I delved into the complexities of fiscal economics and law, developing a deep appreciation for these fields. However, as I envisioned my future, I realized my passion lay elsewhere.
-        </p>
-        <p>
-          In 2022, I made the pivotal decision to transition into the Data Science and Artificial Intelligence program at Maastricht University—a choice I have wholeheartedly embraced. The dynamic realms of data science and AI have captivated me from the start, and I have dedicated myself fully to mastering these disciplines.
-        </p>
-        <p>
-          As a freelancer, I have extensive experience working with Large Language Models (LLMs) and am open to a wide range of projects within the data science and AI fields. My current project involves developing advanced LLM systems for analyzing financial communications, aimed at informing strategic decisions in the financial markets.
-        </p>
-        <p>
-          From October 2023 to June 2024, I worked as a freelance Data Annotator and Red Teaming contractor for <a href="https://outlier.ai/" target="_blank">Outlier.ai</a>, focusing on assessing large language models and annotating training data.
-        </p>
-        <p>
-          Before launching my career in AI, I gathered diverse experience. Between February 2018 and October 2023, I worked as a warehouse employee at <a href="https://www.meijers.com/" target="_blank">L.M. Meijers Bv</a>, provided elderly care at <a href="https://www.zuyderland.nl/" target="_blank">Zuyderland's healthcare facilities</a>, and served as a door-to-door sales representative for <a href="https://duurzaamverbond.nl/" target="_blank">Duurzaam Verbond</a>, promoting sustainable products.
-        </p>
-        <p>
-          I am always open to new freelance opportunities and collaborations. If you have a project where my expertise in data science and AI can be of assistance, please feel free to <a href="contact.html" target="_blank">contact me</a>.
-        </p>
+  <!-- Page Header -->
+  <section class="section page-header py-8">
+    <div class="container">
+      <h1 class="slide-up">About Me</h1>
+      <p class="lead slide-up delay-100">Data Science & AI Developer based in Maastricht</p>
+    </div>
+  </section>
+  
+  <!-- About Section -->
+  <section class="section about-section py-12">
+    <div class="container">
+      <div class="about-grid">
+        <!-- Main Content -->
+        <div class="about-content slide-up">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="section-title">My Journey</h2>
+              
+              <p>My academic journey began after graduating from middle school, leading me to enroll in <a href="https://www.maastrichtuniversity.nl/" target="_blank">Maastricht University</a> where I pursued studies in Fiscal Economics. For two years, I delved into the complexities of fiscal economics and law, developing a deep appreciation for these fields. However, as I envisioned my future, I realized my passion lay elsewhere.</p>
+              
+              <p>In 2022, I made the pivotal decision to transition into the Data Science and Artificial Intelligence program at Maastricht University—a choice I have wholeheartedly embraced. The dynamic realms of data science and AI have captivated me from the start, and I have dedicated myself fully to mastering these disciplines.</p>
+              
+              <h3 class="mt-8 mb-4">Professional Experience</h3>
+              
+              <p>As a freelancer, I have extensive experience working with Large Language Models (LLMs) and am open to a wide range of projects within the data science and AI fields. My current project involves developing advanced LLM systems for analyzing financial communications, aimed at informing strategic decisions in the financial markets.</p>
+              
+              <p>From October 2023 to June 2024, I worked as a freelance Data Annotator and Red Teaming contractor for <a href="https://outlier.ai/" target="_blank">Outlier.ai</a>, focusing on assessing large language models and annotating training data.</p>
+              
+              <p>Before launching my career in AI, I gathered diverse experience. Between February 2018 and October 2023, I worked as a warehouse employee at <a href="https://www.meijers.com/" target="_blank">L.M. Meijers Bv</a>, provided elderly care at <a href="https://www.zuyderland.nl/" target="_blank">Zuyderland's healthcare facilities</a>, and served as a door-to-door sales representative for <a href="https://duurzaamverbond.nl/" target="_blank">Duurzaam Verbond</a>, promoting sustainable products.</p>
+              
+              <h3 class="mt-8 mb-4">My Approach</h3>
+              
+              <p>I believe in building intelligent solutions that solve real-world problems. My approach combines technical expertise with a keen understanding of business needs. Whether it's developing machine learning models, creating data pipelines, or building web applications, I focus on delivering high-quality, efficient solutions.</p>
+              
+              <div class="cta-box mt-8">
+                <p>I am always open to new freelance opportunities and collaborations. If you have a project where my expertise in data science and AI can be of assistance, please feel free to get in touch.</p>
+                <a href="contact.html" class="btn btn-primary mt-4">Contact Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="about-sidebar slide-up delay-100">
+          <!-- Education Card -->
+          <div class="card mb-6">
+            <div class="card-body">
+              <h3 class="card-title">
+                <i class="fas fa-graduation-cap"></i> Education
+              </h3>
+              <ul class="timeline-list">
+                <li class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4>BSc Data Science and Artificial Intelligence</h4>
+                    <p class="timeline-date">2022 - Present</p>
+                    <p>Maastricht University</p>
+                  </div>
+                </li>
+                <li class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4>BSc Fiscal Economics</h4>
+                    <p class="timeline-date">2020 - 2022</p>
+                    <p>Maastricht University (not graduated)</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Interests Card -->
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">
+                <i class="fas fa-star"></i> Interests
+              </h3>
+              <div class="interests-grid">
+                <div class="interest-item">
+                  <i class="fas fa-robot"></i>
+                  <span>AI Research</span>
+                </div>
+                <div class="interest-item">
+                  <i class="fas fa-chart-line"></i>
+                  <span>Data Science</span>
+                </div>
+                <div class="interest-item">
+                  <i class="fas fa-code"></i>
+                  <span>Programming</span>
+                </div>
+                <div class="interest-item">
+                  <i class="fas fa-brain"></i>
+                  <span>Machine Learning</span>
+                </div>
+                <div class="interest-item">
+                  <i class="fas fa-database"></i>
+                  <span>Data Architecture</span>
+                </div>
+                <div class="interest-item">
+                  <i class="fas fa-project-diagram"></i>
+                  <span>System Design</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
   
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Camiel Schmeitz. All rights reserved.</p>
+      <div class="footer-content">
+        <div class="footer-logo">Camiel<span>Schmeitz</span></div>
+        <div class="footer-social">
+          <a href="https://github.com/Schmeitzke" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/camielschmeitz/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="copyright">&copy; 2025 Camiel Schmeitz. All rights reserved.</p>
+      </div>
     </div>
   </footer>
   
-  <!-- JavaScript Files -->
-  <script src="assets/js/topbar.js"></script>
-  <script src="assets/js/main.js"></script>
+  <!-- JavaScript -->
   <script>
-    // Add target="_blank" to all links in the about page
-    document.querySelectorAll('a').forEach(link => {
-      link.setAttribute('target', '_blank');
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navList = document.querySelector('.nav-list');
+      const overlay = document.querySelector('.overlay');
+      
+      if (menuToggle && navList && overlay) {
+        menuToggle.addEventListener('click', function() {
+          menuToggle.classList.toggle('active');
+          navList.classList.toggle('active');
+          overlay.classList.toggle('active');
+          document.body.classList.toggle('no-scroll');
+        });
+        
+        overlay.addEventListener('click', function() {
+          menuToggle.classList.remove('active');
+          navList.classList.remove('active');
+          overlay.classList.remove('active');
+          document.body.classList.remove('no-scroll');
+        });
+      }
+      
+      // Header scroll effect
+      const header = document.querySelector('.header');
+      let lastScrollY = window.scrollY;
+      
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+          header.classList.add('scrolled');
+          
+          // Hide header on scroll down, show on scroll up
+          if (window.scrollY > lastScrollY) {
+            header.classList.add('hidden');
+          } else {
+            header.classList.remove('hidden');
+          }
+        } else {
+          header.classList.remove('scrolled');
+        }
+        
+        lastScrollY = window.scrollY;
+      });
+      
+      // Make sure all external links open in a new tab
+      document.querySelectorAll('.about-content a[href^="http"]').forEach(link => {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener');
+      });
     });
   </script>
 </body>

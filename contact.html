@@ -3,39 +3,157 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Camiel Schmeitz - Contact</title>
-  <!-- Topbar styles -->
+  <title>Contact | Camiel Schmeitz</title>
+  <!-- Modern icon for the site -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS files -->
   <link rel="stylesheet" href="assets/css/topbar.css" />
-  <!-- Shared styles -->
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <!-- Page-specific contact styles -->
-  <link rel="stylesheet" href="assets/css/contact.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
 </head>
 <body>
-  <!-- Topbar placeholder injected by topbar.js -->
-  <div id="topbar-placeholder"></div>
+  <!-- Modern Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">Camiel<span>Schmeitz</span></a>
+      <nav class="nav">
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="portfolio.html" class="nav-link">Projects</a></li>
+          <li><a href="cv.html" class="nav-link">CV</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="overlay"></div>
   
-  <!-- Main Content -->
-  <main class="container main-content">
-    <section class="contact-section">
-      <h1>Contact Me</h1>
-      <p class="intro">Feel free to email me at <a href="mailto:camielschmeitz@gmail.com">camielschmeitz@gmail.com</a></p>
-      <!-- Added LinkedIn link with logo -->
-      <a class="linkedin-link" href="https://www.linkedin.com/in/camielschmeitz/" target="_blank">
-        <img src="images\In-Blue-72@2x.png" alt="LinkedIn Logo" />
-      </a>
-    </section>
-  </main>
+  <!-- Page Header -->
+  <section class="section page-header py-8">
+    <div class="container">
+      <h1 class="slide-up">Get In Touch</h1>
+      <p class="lead slide-up delay-100">Let's discuss your project or collaboration opportunities</p>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section class="section contact-section py-12">
+    <div class="container">
+      <div class="contact-info-container slide-up">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Contact Information</h2>
+            <ul class="contact-info-list">
+              <li>
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h3>Email</h3>
+                  <a href="mailto:camielschmeitz@gmail.com">camielschmeitz@gmail.com</a>
+                </div>
+              </li>
+              
+              <li>
+                <i class="fas fa-phone"></i>
+                <div>
+                  <h3>Phone</h3>
+                  <a href="tel:+31637557073">+31 637557073</a>
+                </div>
+              </li>
+              
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h3>Location</h3>
+                  <p>Maastricht, The Netherlands</p>
+                </div>
+              </li>
+            </ul>
+            
+            <div class="social-links">
+              <h3>Connect With Me</h3>
+              <div class="social-icons">
+                <a href="https://github.com/Schmeitzke" target="_blank" class="social-icon">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/camielschmeitz/" target="_blank" class="social-icon">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Camiel Schmeitz. All rights reserved.</p>
+      <div class="footer-content">
+        <div class="footer-logo">Camiel<span>Schmeitz</span></div>
+        <div class="footer-social">
+          <a href="https://github.com/Schmeitzke" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/camielschmeitz/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="copyright">&copy; 2025 Camiel Schmeitz. All rights reserved.</p>
+      </div>
     </div>
   </footer>
   
-  <!-- JavaScript Files -->
-  <script src="assets/js/topbar.js"></script>
-  <script src="assets/js/main.js"></script>
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navList = document.querySelector('.nav-list');
+      const overlay = document.querySelector('.overlay');
+      
+      if (menuToggle && navList && overlay) {
+        menuToggle.addEventListener('click', function() {
+          menuToggle.classList.toggle('active');
+          navList.classList.toggle('active');
+          overlay.classList.toggle('active');
+          document.body.classList.toggle('no-scroll');
+        });
+        
+        overlay.addEventListener('click', function() {
+          menuToggle.classList.remove('active');
+          navList.classList.remove('active');
+          overlay.classList.remove('active');
+          document.body.classList.remove('no-scroll');
+        });
+      }
+      
+      // Header scroll effect
+      const header = document.querySelector('.header');
+      let lastScrollY = window.scrollY;
+      
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+          header.classList.add('scrolled');
+          
+          // Hide header on scroll down, show on scroll up
+          if (window.scrollY > lastScrollY) {
+            header.classList.add('hidden');
+          } else {
+            header.classList.remove('hidden');
+          }
+        } else {
+          header.classList.remove('scrolled');
+        }
+        
+        lastScrollY = window.scrollY;
+      });
+    });
+  </script>
 </body>
 </html>

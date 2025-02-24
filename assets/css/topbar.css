@@ -1,185 +1,207 @@
 /* File: assets/css/topbar.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* (Optional) Import fonts and define the same root variables used across the site */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
+/* Variables from the main CSS */
 :root {
-  --bg-color: #dddddd;
-  --text-color: #7b7b7b;
-  --link-hover-color: #b7f5bb;
-  --menu-font-family: 'Poppins', sans-serif;
-  --menu-font-size: 0.8rem;
-  --topbar-height: 5rem; /* Fixed height of the topbar */
+  --color-bg: #f8f9fa;
+  --color-text: #212529;
+  --color-primary: #3a86ff;
+  --color-primary-light: #83b9ff;
+  --color-secondary: #ff006e;
+  --color-accent: #8338ec;
+  --color-card-bg: #ffffff;
+  --color-card-border: rgba(0, 0, 0, 0.05);
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --header-height: 4rem;
+  --transition: 300ms;
+  --transition-fast: 150ms;
 }
 
-/* 1. Body offset so the topbar doesn’t overlap content */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--menu-font-family);
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  padding-top: var(--topbar-height); /* Push content below the fixed topbar */
-}
-
-/* 2. Fixed Topbar */
-.top-bar {
-  background-color: var(--bg-color);
+/* Modern Header */
+.header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: var(--topbar-height);
+  height: var(--header-height);
+  background-color: var(--color-card-bg);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   z-index: 1000;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.header.scrolled {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header.hidden {
+  transform: translateY(-100%);
+}
+
+/* Header container for alignment */
+.header .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo styling */
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-text);
+  text-decoration: none;
   display: flex;
   align-items: center;
 }
 
-/* 3. Container for the nav */
-.top-bar .container {
-  width: 100%;
-  max-width: 1200px; 
-  margin: 0 auto;
-  padding: 0 2rem;
+.logo span {
+  color: var(--color-primary);
 }
 
-/* 4. Nav Menu Layout */
-.top-bar nav ul {
-  list-style: none;
+/* Main Navigation */
+.nav {
   display: flex;
-  justify-content: flex-end;
-  gap: 4rem;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
   margin: 0;
   padding: 0;
+  gap: 2rem;
 }
 
-/* 5. Nav Links */
-.top-bar nav ul li a {
+.nav-link {
+  position: relative;
   text-decoration: none;
-  color: var(--text-color);
-  font-size: var(--menu-font-size);
-  transition: color 0.3s ease;
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  transition: color var(--transition-fast) ease;
 }
 
-/* Hover and Active States */
-.top-bar nav ul li a:hover {
-  color: var(--link-hover-color);
-}
-.top-bar nav ul li a.active {
-  font-weight: bold;
-}
-
-/* New styles for hamburger and dropdown menu */
-.menu-container {
-    position: relative;
-}
-.hamburger {
-    width: 30px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 20px;
-    align-items: center;
-    /* Position at top right of container */
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-}
-.hamburger span {
-    width: 100%;
-    height: 3px;
-    background: var(--text-color);
-}
-.menu {
-    position: absolute;
-    top: 50%;
-    right: 0; /* changed from right: 100% */
-    transform: translateY(-50%); /* removed translateX offset */
-    background: var(--bg-color);
-    padding: 1rem;
-    border-radius: 0 0 0 8px;
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-.menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.menu ul li {
-    margin-bottom: 0.5rem;
-}
-.menu ul li:last-child {
-    margin-bottom: 0;
-}
-/* Keep menu unfolded when hovering over either the container or the menu */
-.menu-container:hover .menu,
-.menu:hover {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(-50%); /* simplified */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: width var(--transition) ease;
 }
 
-@media screen and (max-width: 768px) {
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primary);
+}
 
-  /* .menu overrides */
-  .menu {
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 2rem;
+  height: 1.5rem;
+  position: relative;
+  z-index: 1010;
+}
+
+.menu-toggle span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: var(--color-text);
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: var(--transition-fast) ease-in-out;
+}
+
+.menu-toggle span:nth-child(1) {
+  top: 0;
+}
+
+.menu-toggle span:nth-child(2),
+.menu-toggle span:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-toggle span:nth-child(4) {
+  bottom: 0;
+}
+
+.menu-toggle.active span:nth-child(1),
+.menu-toggle.active span:nth-child(4) {
+  width: 0;
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .nav-list {
     position: fixed;
-    top: 18%;
+    top: 0;
     right: 0;
-    left: auto;
-    width: auto;       /* changed from fixed width */
-    height: auto;      /* changed from fixed height */
-    background: #97db9b;
-    z-index: 9999;
-    border-radius: 20px;
-    display: none;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    white-space: nowrap; /* enables shrinkwrapping */
-    padding: 1rem;     /* adjust padding as needed */
-  }
-
-  .menu.open {
-    display: block;
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  /* Force removal of any margin/gap on the UL and LI */
-  .menu ul {
-    margin: 0 !important;
-    padding: 0 !important;
-    list-style: none;
-    display: flex;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--color-card-bg);
     flex-direction: column;
-    /* Make sure there's no gap if you had 'gap' set */
-    gap: 0 !important;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transform: translateX(100%);
+    transition: transform var(--transition) ease;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    z-index: 1000;
   }
-
-  .menu ul li {
-    margin: 0 !important;
-    padding: 0.1rem !important;
+  
+  .nav-list.active {
+    transform: translateX(0);
   }
-
-  /* Make sure anchor tags don’t add extra spacing */
-  .menu ul li a {
+  
+  .menu-toggle {
     display: block;
-    background: #6fa172;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    text-align: center;
-    text-decoration: none;
-    color: #0a0a0a !important;
-    font-size: 1rem;
-    line-height: 1;
   }
-
-  .menu ul li a:hover {
-    background: #989898;
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition) ease, visibility var(--transition) ease;
+  }
+  
+  .overlay.active {
+    opacity: 1;
+    visibility: visible;
   }
 }
