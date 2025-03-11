@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="assets/css/topbar.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="assets/css/animations.css" />
+  <!-- Translations JS -->
+  <script src="assets/js/translations.js"></script>
 </head>
 <body>
   <!-- Modern Header -->
@@ -26,13 +28,25 @@
           <span></span>
         </button>
         <ul class="nav-list">
-          <li><a href="index.html" class="nav-link active">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="portfolio.html" class="nav-link">Projects</a></li>
-          <li><a href="cv.html" class="nav-link">CV</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="index.html" class="nav-link active" data-i18n="topbar.home">Home</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="topbar.about">About</a></li>
+          <li><a href="portfolio.html" class="nav-link" data-i18n="topbar.projects">Projects</a></li>
+          <li><a href="cv.html" class="nav-link" data-i18n="topbar.cv">CV</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="topbar.contact">Contact</a></li>
         </ul>
       </nav>
+      
+      <!-- Language Selector Dropdown -->
+      <div class="language-selector">
+        <div class="lang-dropdown">
+          <button class="current-lang">EN</button>
+          <div class="lang-options">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="nl">NL</button>
+            <button class="lang-btn" data-lang="li">LI</button>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
   <div class="overlay"></div>
@@ -41,11 +55,11 @@
   <section class="section hero-section py-16">
     <div class="container">
       <div class="hero-content">
-        <h1 class="slide-up">Data Science & AI Developer</h1>
-        <p class="slide-up delay-100">I build intelligent solutions using machine learning, data analysis, and modern web technologies.</p>
+        <h1 class="slide-up" data-i18n="home.title">Data Science & AI Developer</h1>
+        <p class="slide-up delay-100" data-i18n="home.subtitle">I build intelligent solutions using machine learning, data analysis, and modern web technologies.</p>
         <div class="hero-cta slide-up delay-200">
-          <a href="portfolio.html" class="btn btn-primary">View My Work</a>
-          <a href="cv.html" class="btn btn-outline">My Experience</a>
+          <a href="portfolio.html" class="btn btn-primary" data-i18n="home.view_work">View My Work</a>
+          <a href="cv.html" class="btn btn-outline" data-i18n="home.experience">My Experience</a>
         </div>
       </div>
     </div>
@@ -54,27 +68,27 @@
   <!-- Skills Section -->
   <section class="section skills-section py-12">
     <div class="container">
-      <h2 class="section-title slide-up">My Skills</h2>
+      <h2 class="section-title slide-up" data-i18n="home.skills_section">My Skills</h2>
       <div class="skills-grid grid">
         <div class="card slide-up delay-100">
           <div class="card-body">
             <i class="fas fa-brain fa-2x mb-4" style="color: var(--color-primary);"></i>
-            <h3 class="card-title">Machine Learning</h3>
-            <p>Custom model development, training pipelines, and data preprocessing.</p>
+            <h3 class="card-title" data-i18n="home.ml_title">Machine Learning</h3>
+            <p data-i18n="home.ml_desc">Custom model development, training pipelines, and data preprocessing.</p>
           </div>
         </div>
         <div class="card slide-up delay-200">
           <div class="card-body">
             <i class="fas fa-code fa-2x mb-4" style="color: var(--color-primary);"></i>
-            <h3 class="card-title">Web Development</h3>
-            <p>Front-end development with modern frameworks and responsive design.</p>
+            <h3 class="card-title" data-i18n="home.web_title">Web Development</h3>
+            <p data-i18n="home.web_desc">Front-end development with modern frameworks and responsive design.</p>
           </div>
         </div>
         <div class="card slide-up delay-300">
           <div class="card-body">
             <i class="fas fa-database fa-2x mb-4" style="color: var(--color-primary);"></i>
-            <h3 class="card-title">Data Management</h3>
-            <p>Database design, data cleaning, and efficient data processing.</p>
+            <h3 class="card-title" data-i18n="home.data_title">Data Management</h3>
+            <p data-i18n="home.data_desc">Database design, data cleaning, and efficient data processing.</p>
           </div>
         </div>
       </div>
@@ -84,16 +98,16 @@
   <!-- Recent Projects Section -->
   <section class="section projects-section py-12">
     <div class="container">
-      <h2 class="section-title slide-up">Recent Projects</h2>
+      <h2 class="section-title slide-up" data-i18n="home.projects_section">Recent Projects</h2>
       <div class="projects-grid grid">
         <!-- Financial Sentiment LLM Project -->
         <div class="card project-card slide-up delay-100">
           <div class="card-body">
-            <h3 class="card-title">Financial Sentiment LLM</h3>
-            <p class="mb-4">AI-driven financial system with language models for real-time market insights.</p>
+            <h3 class="card-title" data-i18n="portfolio.financial_title">Financial Sentiment LLM</h3>
+            <p class="mb-4" data-i18n="portfolio.financial_desc">AI-driven financial system with language models for real-time market insights.</p>
             <div class="project-status">
-              <span class="status-badge in-progress">In Progress</span>
-              <span class="status-badge private">Private Repo</span>
+              <span class="status-badge in-progress" data-i18n="portfolio.in_progress">In Progress</span>
+              <span class="status-badge private" data-i18n="portfolio.private_repo">Private Repo</span>
             </div>
           </div>
         </div>
@@ -101,21 +115,21 @@
         <!-- Deep Research Project -->
         <div class="card project-card slide-up delay-200">
           <div class="card-body">
-            <h3 class="card-title">Deep Research</h3>
-            <p class="mb-4">Open-source deep-research system with enhanced API call system and optimized performance.</p>
+            <h3 class="card-title" data-i18n="portfolio.deep_research_title">Deep Research</h3>
+            <p class="mb-4" data-i18n="home.deep_research_desc">Open-source deep-research system with enhanced API call system and optimized performance.</p>
             <div class="project-links">
               <a href="https://github.com/Schmeitzke/deep-research-py" target="_blank" class="project-link">
-                <i class="fab fa-github"></i> View on GitHub
+                <i class="fab fa-github"></i> <span data-i18n="portfolio.view_github">View on GitHub</span>
               </a>
             </div>
             <div class="project-status">
-              <span class="status-badge in-progress">In Progress</span>
+              <span class="status-badge in-progress" data-i18n="portfolio.in_progress">In Progress</span>
             </div>
           </div>
         </div>
       </div>
       <div class="text-center mt-8 slide-up delay-300">
-        <a href="portfolio.html" class="btn btn-outline">View All Projects</a>
+        <a href="portfolio.html" class="btn btn-outline" data-i18n="home.view_all">View All Projects</a>
       </div>
     </div>
   </section>
@@ -124,9 +138,9 @@
   <section class="section cta-section py-16">
     <div class="container">
       <div class="cta-content text-center slide-up">
-        <h2>Let's Work Together</h2>
-        <p class="mb-4">Interested in collaborating on a project? Get in touch with me to discuss how we can work together.</p>
-        <a href="contact.html" class="btn btn-primary">Contact Me</a>
+        <h2 data-i18n="home.cta_title">Let's Work Together</h2>
+        <p class="mb-4" data-i18n="home.cta_desc">Interested in collaborating on a project? Get in touch with me to discuss how we can work together.</p>
+        <a href="contact.html" class="btn btn-primary" data-i18n="home.contact_me">Contact Me</a>
       </div>
     </div>
   </section>
@@ -140,7 +154,7 @@
           <a href="https://github.com/Schmeitzke" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
           <a href="https://www.linkedin.com/in/camielschmeitz/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
         </div>
-        <p class="copyright">&copy; 2025 Camiel Schmeitz. All rights reserved.</p>
+        <p class="copyright">&copy; 2025 Camiel Schmeitz. <span data-i18n="home.copyright">All rights reserved.</span></p>
       </div>
     </div>
   </footer>

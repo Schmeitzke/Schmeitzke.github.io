@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="assets/css/topbar.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="assets/css/animations.css" />
+  <!-- Translations JS -->
+  <script src="assets/js/translations.js"></script>
 </head>
 <body>
   <!-- Modern Header -->
@@ -26,13 +28,25 @@
           <span></span>
         </button>
         <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="portfolio.html" class="nav-link active">Projects</a></li>
-          <li><a href="cv.html" class="nav-link">CV</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="index.html" class="nav-link" data-i18n="topbar.home">Home</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="topbar.about">About</a></li>
+          <li><a href="portfolio.html" class="nav-link active" data-i18n="topbar.projects">Projects</a></li>
+          <li><a href="cv.html" class="nav-link" data-i18n="topbar.cv">CV</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="topbar.contact">Contact</a></li>
         </ul>
       </nav>
+      
+      <!-- Language Selector Dropdown -->
+      <div class="language-selector">
+        <div class="lang-dropdown">
+          <button class="current-lang">EN</button>
+          <div class="lang-options">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="nl">NL</button>
+            <button class="lang-btn" data-lang="li">LI</button>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
   <div class="overlay"></div>
@@ -40,8 +54,8 @@
   <!-- Page Header -->
   <section class="section page-header py-8">
     <div class="container">
-      <h1 class="slide-up">My Projects</h1>
-      <p class="lead slide-up delay-100">Explore my work in AI, machine learning, and data science</p>
+      <h1 class="slide-up" data-i18n="portfolio.title">My Projects</h1>
+      <p class="lead slide-up delay-100" data-i18n="portfolio.subtitle">Explore my work in AI, machine learning, and data science</p>
     </div>
   </section>
   
@@ -53,14 +67,14 @@
         <div class="card project-card slide-up">
           <div class="card-body">
             <div class="project-header">
-              <h3 class="card-title">Financial Sentiment LLM</h3>
+              <h3 class="card-title" data-i18n="portfolio.financial_title">Financial Sentiment LLM</h3>
               <div class="project-status">
-                <span class="status-badge in-progress">In Progress</span>
-                <span class="status-badge private">Private Repo</span>
+                <span class="status-badge in-progress" data-i18n="portfolio.in_progress">In Progress</span>
+                <span class="status-badge private" data-i18n="portfolio.private_repo">Private Repo</span>
               </div>
             </div>
             
-            <p class="project-desc">I have been part of a three-person team developing an AI-driven financial system that integrates advanced language models for real-time market insights. We built a full-stack platform with a custom training pipeline, real-time data processing, a React interface, and a Django backend.</p>
+            <p class="project-desc" data-i18n="portfolio.financial_desc">I have been part of a three-person team developing an AI-driven financial system that integrates advanced language models for real-time market insights. We built a full-stack platform with a custom training pipeline, real-time data processing, a React interface, and a Django backend.</p>
             
             <div class="project-tech">
               <span class="tech-tag">Python</span>
@@ -76,13 +90,13 @@
         <div class="card project-card slide-up delay-100">
           <div class="card-body">
             <div class="project-header">
-              <h3 class="card-title">Deep Research</h3>
+              <h3 class="card-title" data-i18n="portfolio.deep_research_title">Deep Research</h3>
               <div class="project-status">
-                <span class="status-badge in-progress">In Progress</span>
+                <span class="status-badge in-progress" data-i18n="portfolio.in_progress">In Progress</span>
               </div>
             </div>
             
-            <p class="project-desc">This is an independently developed open-source deep-research system, inspired by OpenAI Deep-Research. It began as a fork of an existing open-source repository, but I have extensively improved it. I redesigned the API call system, optimized performance, enhanced accuracy, and refined document formatting for more structured outputs.</p>
+            <p class="project-desc" data-i18n="portfolio.deep_research_desc">This is an independently developed open-source deep-research system, inspired by OpenAI Deep-Research. It began as a fork of an existing open-source repository, but I have extensively improved it. I redesigned the API call system, optimized performance, enhanced accuracy, and refined document formatting for more structured outputs.</p>
             
             <div class="project-tech">
               <span class="tech-tag">Python</span>
@@ -93,7 +107,7 @@
             
             <div class="project-links mt-4">
               <a href="https://github.com/Schmeitzke/deep-research-py" target="_blank" class="project-link">
-                <i class="fab fa-github"></i> View on GitHub
+                <i class="fab fa-github"></i> <span data-i18n="portfolio.view_github">View on GitHub</span>
               </a>
             </div>
           </div>
@@ -103,14 +117,14 @@
         <div class="card project-card slide-up delay-200">
           <div class="card-body">
             <div class="project-header">
-              <h3 class="card-title">Your Project Here?</h3>
+              <h3 class="card-title" data-i18n="portfolio.future_title">Your Project Here?</h3>
             </div>
             
-            <p class="project-desc">I'm always open to new collaborations and projects. If you have an idea for a project related to AI, machine learning, or data science, I'd love to discuss how we can work together to bring it to life.</p>
+            <p class="project-desc" data-i18n="portfolio.future_desc">I'm always open to new collaborations and projects. If you have an idea for a project related to AI, machine learning, or data science, I'd love to discuss how we can work together to bring it to life.</p>
             
             <div class="project-links mt-4">
               <a href="contact.html" class="project-link">
-                <i class="fas fa-envelope"></i> Get in Contact
+                <i class="fas fa-envelope"></i> <span data-i18n="portfolio.get_contact">Get in Contact</span>
               </a>
             </div>
           </div>
@@ -122,10 +136,10 @@
   <!-- Skills Section -->
   <section class="section skills-overview-section py-12">
     <div class="container">
-      <h2 class="section-title slide-up">Technology Stack</h2>
+      <h2 class="section-title slide-up" data-i18n="portfolio.tech_stack">Technology Stack</h2>
       <div class="skills-overview-grid slide-up delay-100">
         <div class="skill-category">
-          <h3>Languages</h3>
+          <h3 data-i18n="portfolio.languages">Languages</h3>
           <div class="skills-list">
             <span class="skill-item">Python</span>
             <span class="skill-item">JavaScript</span>
@@ -136,7 +150,7 @@
         </div>
         
         <div class="skill-category">
-          <h3>AI & ML</h3>
+          <h3 data-i18n="portfolio.ai_ml">AI & ML</h3>
           <div class="skills-list">
             <span class="skill-item">PyTorch</span>
             <span class="skill-item">LLM Training</span>
@@ -147,7 +161,7 @@
         </div>
         
         <div class="skill-category">
-          <h3>Web Development</h3>
+          <h3 data-i18n="portfolio.web_dev">Web Development</h3>
           <div class="skills-list">
             <span class="skill-item">React</span>
             <span class="skill-item">Django</span>
@@ -164,9 +178,9 @@
   <section class="section cta-section py-16">
     <div class="container">
       <div class="cta-content text-center slide-up">
-        <h2>Interested in Working Together?</h2>
-        <p class="mb-4">Reach out to discuss your project ideas or potential collaborations</p>
-        <a href="contact.html" class="btn btn-primary">Contact Me</a>
+        <h2 data-i18n="portfolio.cta_title">Interested in Working Together?</h2>
+        <p class="mb-4" data-i18n="portfolio.cta_subtitle">Reach out to discuss your project ideas or potential collaborations</p>
+        <a href="contact.html" class="btn btn-primary" data-i18n="home.contact_me">Contact Me</a>
       </div>
     </div>
   </section>
@@ -180,7 +194,7 @@
           <a href="https://github.com/Schmeitzke" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
           <a href="https://www.linkedin.com/in/camielschmeitz/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
         </div>
-        <p class="copyright">&copy; 2025 Camiel Schmeitz. All rights reserved.</p>
+        <p class="copyright">&copy; 2025 Camiel Schmeitz. <span data-i18n="home.copyright">All rights reserved.</span></p>
       </div>
     </div>
   </footer>

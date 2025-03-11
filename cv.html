@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="assets/css/topbar.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="assets/css/animations.css" />
+  <!-- Translations JS -->
+  <script src="assets/js/translations.js"></script>
 </head>
 <body>
   <!-- Modern Header -->
@@ -26,13 +28,25 @@
           <span></span>
         </button>
         <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="portfolio.html" class="nav-link">Projects</a></li>
-          <li><a href="cv.html" class="nav-link active">CV</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="index.html" class="nav-link" data-i18n="topbar.home">Home</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="topbar.about">About</a></li>
+          <li><a href="portfolio.html" class="nav-link" data-i18n="topbar.projects">Projects</a></li>
+          <li><a href="cv.html" class="nav-link active" data-i18n="topbar.cv">CV</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="topbar.contact">Contact</a></li>
         </ul>
       </nav>
+      
+      <!-- Language Selector Dropdown -->
+      <div class="language-selector">
+        <div class="lang-dropdown">
+          <button class="current-lang">EN</button>
+          <div class="lang-options">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="nl">NL</button>
+            <button class="lang-btn" data-lang="li">LI</button>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
   <div class="overlay"></div>
@@ -40,8 +54,8 @@
   <!-- Page Header -->
   <section class="section page-header py-8">
     <div class="container">
-      <h1 class="slide-up">Curriculum Vitae</h1>
-      <p class="lead slide-up delay-100">Data Science & AI Developer</p>
+      <h1 class="slide-up" data-i18n="cv.title">Curriculum Vitae</h1>
+      <p class="lead slide-up delay-100" data-i18n="cv.subtitle">Data Science & AI Developer</p>
     </div>
   </section>
   
@@ -53,78 +67,80 @@
         <div class="cv-main slide-up">
           <!-- Experience Section -->
           <div class="cv-block">
-            <h2 class="cv-block-title">
-              <i class="fas fa-briefcase"></i> Experience
-            </h2>
+            <h2 class="cv-block-title" data-i18n="cv.experience">Experience</h2>
             
             <!-- Experience Item 1 -->
             <div class="cv-item">
               <div class="cv-item-header">
-                <h3>Back-End Developer with Front-End Knowledge</h3>
-                <span class="cv-date">June 2024 - Present</span>
+                <h3 data-i18n="cv.backend_title">Back-End Developer with Front-End Knowledge</h3>
+                <p class="cv-date" data-i18n="cv.backend_date">June 2024 - Present</p>
+                <p class="cv-company" data-i18n="cv.backend_company">Freelance</p>
               </div>
-              <div class="cv-company">Freelance</div>
-              <p class="cv-description">
-                Collaborated on the development of an advanced AI-driven analytics platform, focusing on machine learning model creation, data management, and full-stack application development to support automated decision-making processes on the options and futures market.
-              </p>
+              <div class="cv-description">
+                <p data-i18n="cv.backend_desc">Collaborated on the development of an advanced AI-driven analytics platform, focusing on machine learning model creation, data management, and full-stack application development to support automated decision-making processes on the options and futures market.</p>
+              </div>
             </div>
             
             <!-- Experience Item 2 -->
             <div class="cv-item">
               <div class="cv-item-header">
-                <h3>Freelance Data Annotator and Red Teaming</h3>
-                <span class="cv-date">October 2023 – June 2024</span>
+                <h3 data-i18n="cv.annotator_title">Freelance Data Annotator and Red Teaming</h3>
+                <p class="cv-date" data-i18n="cv.annotator_date">October 2023 – June 2024</p>
+                <p class="cv-company" data-i18n="cv.annotator_company">Outlier.ai</p>
               </div>
-              <div class="cv-company">Outlier.ai</div>
-              <p class="cv-description">
-                Independent contractor focusing on the assessment of large language models (LLMs) and annotation of training data.
-              </p>
+              <div class="cv-description">
+                <p data-i18n="cv.annotator_desc">Independent contractor focusing on the assessment of large language models (LLMs) and annotation of training data.</p>
+              </div>
             </div>
             
             <!-- Experience Item 3 -->
             <div class="cv-item">
               <div class="cv-item-header">
-                <h3>Early Career Experience</h3>
-                <span class="cv-date">February 2018 – October 2023</span>
+                <h3 data-i18n="cv.early_title">Early Career Experience</h3>
+                <p class="cv-date" data-i18n="cv.early_date">February 2018 – October 2023</p>
+                <p class="cv-company" data-i18n="cv.early_company">Various Companies</p>
               </div>
-              <div class="cv-company">Various Companies</div>
-              <p class="cv-description">
-                Worked as a warehouse employee at L.M. Meijers Bv, provided elderly care at Zuyderland's healthcare facilities, and served as a door-to-door sales representative for Duurzaam Verbond, promoting sustainable products.
-              </p>
+              <div class="cv-description">
+                <p data-i18n="cv.early_desc">Worked as a warehouse employee at L.M. Meijers Bv, provided elderly care at Zuyderland's healthcare facilities, and served as a door-to-door sales representative for Duurzaam Verbond, promoting sustainable products.</p>
+              </div>
             </div>
           </div>
           
           <!-- Education Section -->
           <div class="cv-block">
-            <h2 class="cv-block-title">
-              <i class="fas fa-graduation-cap"></i> Education
-            </h2>
+            <h2 class="cv-block-title" data-i18n="cv.education">Education</h2>
             
             <!-- Education Item 1 -->
             <div class="cv-item">
               <div class="cv-item-header">
-                <h3>BSc Data Science and Artificial Intelligence</h3>
-                <span class="cv-date">September 2020 – Present</span>
+                <h3 data-i18n="cv.uni_dsai">BSc Data Science and Artificial Intelligence</h3>
+                <p class="cv-date" data-i18n="cv.uni_dsai_date">September 2020 – Present</p>
               </div>
-              <div class="cv-company">Maastricht University</div>
+              <div class="cv-description">
+                <p>Maastricht University</p>
+              </div>
             </div>
             
             <!-- Education Item 2 -->
             <div class="cv-item">
               <div class="cv-item-header">
-                <h3>BSc Fiscal Economics (not graduated)</h3>
-                <span class="cv-date">September 2020 – 2022</span>
+                <h3 data-i18n="cv.uni_fiscal">BSc Fiscal Economics (not graduated)</h3>
+                <p class="cv-date" data-i18n="cv.uni_fiscal_date">September 2020 – 2022</p>
               </div>
-              <div class="cv-company">Maastricht University</div>
+              <div class="cv-description">
+                <p>Maastricht University</p>
+              </div>
             </div>
             
             <!-- Education Item 3 -->
             <div class="cv-item">
               <div class="cv-item-header">
-                <h3>Secondary Education</h3>
-                <span class="cv-date">September 2013 – July 2020</span>
+                <h3 data-i18n="cv.secondary">Secondary Education</h3>
+                <p class="cv-date" data-i18n="cv.secondary_date">September 2013 – July 2020</p>
               </div>
-              <div class="cv-company">Atheneum Trevianum Scholengroep</div>
+              <div class="cv-description">
+                <p data-i18n="cv.secondary_school">Atheneum Trevianum Scholengroep</p>
+              </div>
             </div>
           </div>
         </div>
@@ -133,9 +149,7 @@
         <div class="cv-sidebar slide-up delay-100">
           <!-- Contact Info -->
           <div class="cv-block">
-            <h2 class="cv-block-title">
-              <i class="fas fa-address-card"></i> Contact
-            </h2>
+            <h2 class="cv-block-title" data-i18n="cv.contact">Contact</h2>
             <ul class="cv-contact-list">
               <li>
                 <i class="fas fa-envelope"></i>
@@ -147,20 +161,18 @@
               </li>
               <li>
                 <i class="fab fa-linkedin"></i>
-                <a href="https://www.linkedin.com/in/camielschmeitz/" target="_blank">LinkedIn Profile</a>
+                <a href="https://www.linkedin.com/in/camielschmeitz/" target="_blank" data-i18n="cv.linkedin_profile">LinkedIn Profile</a>
               </li>
               <li>
                 <i class="fab fa-github"></i>
-                <a href="https://github.com/Schmeitzke" target="_blank">GitHub Profile</a>
+                <a href="https://github.com/Schmeitzke" target="_blank" data-i18n="cv.github_profile">GitHub Profile</a>
               </li>
             </ul>
           </div>
           
           <!-- Skills -->
           <div class="cv-block">
-            <h2 class="cv-block-title">
-              <i class="fas fa-code"></i> Skills
-            </h2>
+            <h2 class="cv-block-title" data-i18n="cv.skills">Skills</h2>
             <div class="cv-skills">
               <span class="cv-skill">Cython</span>
               <span class="cv-skill">Cross-Platform Development</span>
@@ -191,9 +203,9 @@
           
           <!-- Download CV -->
           <div class="cv-block">
-            <a href="assets/Camiel_CV.pdf" target="_blank" class="btn btn-primary btn-download">
-              <i class="fas fa-download"></i> Download PDF
-            </a>
+            <div class="btn-download mt-8">
+              <a href="#" class="btn btn-primary" data-i18n="cv.download_pdf">Download PDF</a>
+            </div>
           </div>
         </div>
       </div>
@@ -209,7 +221,7 @@
           <a href="https://github.com/Schmeitzke" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
           <a href="https://www.linkedin.com/in/camielschmeitz/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
         </div>
-        <p class="copyright">&copy; 2025 Camiel Schmeitz. All rights reserved.</p>
+        <p class="copyright">&copy; 2025 Camiel Schmeitz. <span data-i18n="home.copyright">All rights reserved.</span></p>
       </div>
     </div>
   </footer>
