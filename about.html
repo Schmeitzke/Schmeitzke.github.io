@@ -31,11 +31,12 @@
           <li><a href="index.html" class="nav-link" data-i18n="topbar.home">Home</a></li>
           <li><a href="about.html" class="nav-link active" data-i18n="topbar.about">About</a></li>
           <li><a href="portfolio.html" class="nav-link" data-i18n="topbar.projects">Projects</a></li>
+          <li><a href="blog.html" class="nav-link" data-i18n="topbar.blog">Blog</a></li> <!-- Added Blog Link -->
           <li><a href="cv.html" class="nav-link" data-i18n="topbar.cv">CV</a></li>
           <li><a href="contact.html" class="nav-link" data-i18n="topbar.contact">Contact</a></li>
         </ul>
       </nav>
-      
+
       <!-- Language Selector Dropdown -->
       <div class="language-selector">
         <div class="lang-dropdown">
@@ -50,7 +51,7 @@
     </div>
   </header>
   <div class="overlay"></div>
-  
+
   <!-- Page Header -->
   <section class="section page-header py-8">
     <div class="container">
@@ -58,7 +59,7 @@
       <p class="lead slide-up delay-100" data-i18n="about.subtitle">Data Science & AI Developer based in Maastricht</p>
     </div>
   </section>
-  
+
   <!-- About Section -->
   <section class="section about-section py-12">
     <div class="container">
@@ -68,23 +69,23 @@
           <div class="card">
             <div class="card-body">
               <h2 class="section-title" data-i18n="about.journey">My Journey</h2>
-              
+
               <p data-i18n="about.journey_p1">My academic journey began after graduating from middle school, leading me to enroll in <a href="https://www.maastrichtuniversity.nl/" target="_blank">Maastricht University</a> where I pursued studies in Fiscal Economics. For two years, I delved into the complexities of fiscal economics and law, developing a deep appreciation for these fields. However, as I envisioned my future, I realized my passion lay elsewhere.</p>
-              
+
               <p data-i18n="about.journey_p2">In 2022, I made the pivotal decision to transition into the Data Science and Artificial Intelligence program at Maastricht University—a choice I have wholeheartedly embraced. The dynamic realms of data science and AI have captivated me from the start, and I have dedicated myself fully to mastering these disciplines.</p>
-              
+
               <h3 class="mt-8 mb-4" data-i18n="about.exp_title">Professional Experience</h3>
-              
+
               <p data-i18n="about.exp_p1">As a freelancer, I have extensive experience working with Large Language Models (LLMs) and am open to a wide range of projects within the data science and AI fields. My current project involves developing advanced LLM systems for analyzing financial communications, aimed at informing strategic decisions in the financial markets.</p>
-              
+
               <p data-i18n="about.exp_p2">From October 2023 to June 2024, I worked as a freelance Data Annotator and Red Teaming contractor for <a href="https://outlier.ai/" target="_blank">Outlier.ai</a>, focusing on assessing large language models and annotating training data.</p>
-              
+
               <p data-i18n="about.exp_p3">Before launching my career in AI, I gathered diverse experience. Between February 2018 and October 2023, I worked as a warehouse employee at <a href="https://www.meijers.com/" target="_blank">L.M. Meijers Bv</a>, provided elderly care at <a href="https://www.zuyderland.nl/" target="_blank">Zuyderland's healthcare facilities</a>, and served as a door-to-door sales representative for <a href="https://duurzaamverbond.nl/" target="_blank">Duurzaam Verbond</a>, promoting sustainable products.</p>
-              
+
               <h3 class="mt-8 mb-4" data-i18n="about.approach_title">My Approach</h3>
-              
+
               <p data-i18n="about.approach_p">I believe in building intelligent solutions that solve real-world problems. My approach combines technical expertise with a keen understanding of business needs. Whether it's developing machine learning models, creating data pipelines, or building web applications, I focus on delivering high-quality, efficient solutions.</p>
-              
+
               <div class="cta-box mt-8">
                 <p data-i18n="about.cta_p">I am always open to new freelance opportunities and collaborations. If you have a project where my expertise in data science and AI can be of assistance, please feel free to get in touch.</p>
                 <a href="contact.html" class="btn btn-primary mt-4" data-i18n="home.contact_me">Contact Me</a>
@@ -92,7 +93,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Sidebar -->
         <div class="about-sidebar slide-up delay-100">
           <!-- Education Card -->
@@ -121,7 +122,7 @@
               </ul>
             </div>
           </div>
-          
+
           <!-- Interests Card -->
           <div class="card">
             <div class="card-body">
@@ -160,7 +161,7 @@
       </div>
     </div>
   </section>
-  
+
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -170,11 +171,11 @@
           <a href="https://github.com/Schmeitzke" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
           <a href="https://www.linkedin.com/in/camielschmeitz/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
         </div>
-        <p class="copyright">&copy; 2025 Camiel Schmeitz. <span data-i18n="home.copyright">All rights reserved.</span></p>
+        <p class="copyright">© 2025 Camiel Schmeitz. <span data-i18n="home.copyright">All rights reserved.</span></p>
       </div>
     </div>
   </footer>
-  
+
   <!-- JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -182,7 +183,7 @@
       const menuToggle = document.querySelector('.menu-toggle');
       const navList = document.querySelector('.nav-list');
       const overlay = document.querySelector('.overlay');
-      
+
       if (menuToggle && navList && overlay) {
         menuToggle.addEventListener('click', function() {
           menuToggle.classList.toggle('active');
@@ -190,7 +191,7 @@
           overlay.classList.toggle('active');
           document.body.classList.toggle('no-scroll');
         });
-        
+
         overlay.addEventListener('click', function() {
           menuToggle.classList.remove('active');
           navList.classList.remove('active');
@@ -198,15 +199,15 @@
           document.body.classList.remove('no-scroll');
         });
       }
-      
+
       // Header scroll effect
       const header = document.querySelector('.header');
       let lastScrollY = window.scrollY;
-      
+
       window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
           header.classList.add('scrolled');
-          
+
           // Hide header on scroll down, show on scroll up
           if (window.scrollY > lastScrollY) {
             header.classList.add('hidden');
@@ -216,10 +217,10 @@
         } else {
           header.classList.remove('scrolled');
         }
-        
+
         lastScrollY = window.scrollY;
       });
-      
+
       // Make sure all external links open in a new tab
       document.querySelectorAll('.about-content a[href^="http"]').forEach(link => {
         link.setAttribute('target', '_blank');

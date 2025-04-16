@@ -11,6 +11,7 @@
   <!-- CSS files -->
   <link rel="stylesheet" href="assets/css/topbar.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/blog.css" /> <!-- Add blog CSS for homepage section -->
   <link rel="stylesheet" href="assets/css/animations.css" />
   <!-- Translations JS -->
   <script src="assets/js/translations.js"></script>
@@ -31,11 +32,12 @@
           <li><a href="index.html" class="nav-link active" data-i18n="topbar.home">Home</a></li>
           <li><a href="about.html" class="nav-link" data-i18n="topbar.about">About</a></li>
           <li><a href="portfolio.html" class="nav-link" data-i18n="topbar.projects">Projects</a></li>
+          <li><a href="blog.html" class="nav-link" data-i18n="topbar.blog">Blog</a></li> <!-- Added Blog Link -->
           <li><a href="cv.html" class="nav-link" data-i18n="topbar.cv">CV</a></li>
           <li><a href="contact.html" class="nav-link" data-i18n="topbar.contact">Contact</a></li>
         </ul>
       </nav>
-      
+
       <!-- Language Selector Dropdown -->
       <div class="language-selector">
         <div class="lang-dropdown">
@@ -50,7 +52,7 @@
     </div>
   </header>
   <div class="overlay"></div>
-  
+
   <!-- Hero Section -->
   <section class="section hero-section py-16">
     <div class="container">
@@ -64,7 +66,7 @@
       </div>
     </div>
   </section>
-  
+
   <!-- Skills Section -->
   <section class="section skills-section py-12">
     <div class="container">
@@ -94,7 +96,7 @@
       </div>
     </div>
   </section>
-  
+
   <!-- Recent Projects Section -->
   <section class="section projects-section py-12">
     <div class="container">
@@ -111,7 +113,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Deep Research Project -->
         <div class="card project-card slide-up delay-200">
           <div class="card-body">
@@ -133,7 +135,64 @@
       </div>
     </div>
   </section>
-  
+
+  <!-- Latest Blogs Section -->
+  <section class="section latest-blogs-section py-12">
+    <div class="container">
+      <h2 class="section-title slide-up" data-i18n="home.latest_blogs">Latest Blogs</h2>
+      <div class="blog-grid grid">
+
+        <!-- Latest Blog Post 1 (Placeholder) -->
+        <div class="card blog-post-card slide-up delay-100">
+          <a href="blog-post-1.html" class="blog-card-link">
+            <div class="blog-thumbnail">
+              <div class="thumbnail-placeholder" style="background-image: url('images/placeholder-16x9.png');"></div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title" data-i18n="blog.post1.title">Placeholder Blog Title 1</h3>
+              <div class="blog-meta">
+                <span class="blog-date" data-i18n="blog.post1.date">July 28, 2024</span>
+              </div>
+              <p class="blog-excerpt" data-i18n="blog.post1.excerpt">A short placeholder excerpt about the first blog post goes here...</p>
+            </div>
+          </a>
+          <div class="card-footer">
+              <a href="blog-post-1.html" class="btn btn-outline btn-sm" data-i18n="blog.read_more">Read More</a>
+              <a href="#" class="blog-linkedin-link" target="_blank" rel="noopener noreferrer" data-i18n="blog.linkedin_link_text" aria-label="View on LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+          </div>
+        </div>
+
+        <!-- Latest Blog Post 2 (Placeholder) -->
+        <div class="card blog-post-card slide-up delay-200">
+           <a href="blog-post-2.html" class="blog-card-link">
+            <div class="blog-thumbnail">
+               <div class="thumbnail-placeholder" style="background-image: url('images/placeholder-16x9-alt.png');"></div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title" data-i18n="blog.post2.title">Placeholder Blog Title 2</h3>
+              <div class="blog-meta">
+                <span class="blog-date" data-i18n="blog.post2.date">July 20, 2024</span>
+              </div>
+               <p class="blog-excerpt" data-i18n="blog.post2.excerpt">Another brief description for the second placeholder blog article...</p>
+            </div>
+          </a>
+           <!-- Footer omitted for brevity on homepage, or add if desired -->
+            <div class="card-footer">
+              <a href="blog-post-2.html" class="btn btn-outline btn-sm" data-i18n="blog.read_more">Read More</a>
+              <a href="#" class="blog-linkedin-link" target="_blank" rel="noopener noreferrer" data-i18n="blog.linkedin_link_text" aria-label="View on LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-8 slide-up delay-300">
+        <a href="blog.html" class="btn btn-outline" data-i18n="home.view_all_blogs">View All Blogs</a>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA Section -->
   <section class="section cta-section py-16">
     <div class="container">
@@ -144,7 +203,7 @@
       </div>
     </div>
   </section>
-  
+
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -154,11 +213,11 @@
           <a href="https://github.com/Schmeitzke" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
           <a href="https://www.linkedin.com/in/camielschmeitz/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
         </div>
-        <p class="copyright">&copy; 2025 Camiel Schmeitz. <span data-i18n="home.copyright">All rights reserved.</span></p>
+        <p class="copyright">© 2025 Camiel Schmeitz. <span data-i18n="home.copyright">All rights reserved.</span></p>
       </div>
     </div>
   </footer>
-  
+
   <!-- Add custom JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -166,7 +225,7 @@
       const menuToggle = document.querySelector('.menu-toggle');
       const navList = document.querySelector('.nav-list');
       const overlay = document.querySelector('.overlay');
-      
+
       if (menuToggle && navList && overlay) {
         menuToggle.addEventListener('click', function() {
           menuToggle.classList.toggle('active');
@@ -174,7 +233,7 @@
           overlay.classList.toggle('active');
           document.body.classList.toggle('no-scroll');
         });
-        
+
         overlay.addEventListener('click', function() {
           menuToggle.classList.remove('active');
           navList.classList.remove('active');
@@ -182,15 +241,15 @@
           document.body.classList.remove('no-scroll');
         });
       }
-      
+
       // Header scroll effect
       const header = document.querySelector('.header');
       let lastScrollY = window.scrollY;
-      
+
       window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
           header.classList.add('scrolled');
-          
+
           // Hide header on scroll down, show on scroll up
           if (window.scrollY > lastScrollY) {
             header.classList.add('hidden');
@@ -200,7 +259,7 @@
         } else {
           header.classList.remove('scrolled');
         }
-        
+
         lastScrollY = window.scrollY;
       });
     });

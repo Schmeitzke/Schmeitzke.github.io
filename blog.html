@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | Camiel Schmeitz</title>
+  <title>Blog | Camiel Schmeitz</title>
   <!-- Modern icon for the site -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <!-- Font Awesome for icons -->
@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="assets/css/topbar.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/blog.css" />
   <!-- Translations JS -->
   <script src="assets/js/translations.js"></script>
 </head>
@@ -31,9 +32,9 @@
           <li><a href="index.html" class="nav-link" data-i18n="topbar.home">Home</a></li>
           <li><a href="about.html" class="nav-link" data-i18n="topbar.about">About</a></li>
           <li><a href="portfolio.html" class="nav-link" data-i18n="topbar.projects">Projects</a></li>
-          <li><a href="blog.html" class="nav-link" data-i18n="topbar.blog">Blog</a></li> <!-- Added Blog Link -->
+          <li><a href="blog.html" class="nav-link active" data-i18n="topbar.blog">Blog</a></li>
           <li><a href="cv.html" class="nav-link" data-i18n="topbar.cv">CV</a></li>
-          <li><a href="contact.html" class="nav-link active" data-i18n="topbar.contact">Contact</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="topbar.contact">Contact</a></li>
         </ul>
       </nav>
 
@@ -55,57 +56,62 @@
   <!-- Page Header -->
   <section class="section page-header py-8">
     <div class="container">
-      <h1 class="slide-up" data-i18n="contact.title">Get In Touch</h1>
-      <p class="lead slide-up delay-100" data-i18n="contact.subtitle">Let's discuss your project or collaboration opportunities</p>
+      <h1 class="slide-up" data-i18n="blog.title">No nonsense AI insights</h1>
+      <p class="lead slide-up delay-100" data-i18n="blog.subtitle">Exploring the world of Artificial Intelligence in a way that's easy to understand</p>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="section contact-section py-12">
+  <!-- Blog List Section -->
+  <section class="section blog-list-section py-12">
     <div class="container">
-      <div class="contact-info-container slide-up">
-        <div class="card">
-          <div class="card-body">
-            <h2 class="card-title" data-i18n="contact.contact_info">Contact Information</h2>
-            <ul class="contact-info-list">
-              <li>
-                <i class="fas fa-envelope"></i>
-                <div>
-                  <h3 data-i18n="contact.email">Email</h3>
-                  <a href="mailto:camielschmeitz@gmail.com">camielschmeitz@gmail.com</a>
-                </div>
-              </li>
+      <div class="blog-grid grid">
 
-              <li>
-                <i class="fas fa-phone"></i>
-                <div>
-                  <h3 data-i18n="contact.phone">Phone</h3>
-                  <a href="tel:+31637557073">+31 637557073</a>
-                </div>
-              </li>
-
-              <li>
-                <i class="fas fa-map-marker-alt"></i>
-                <div>
-                  <h3 data-i18n="contact.location">Location</h3>
-                  <p data-i18n="contact.location_value">Maastricht, The Netherlands</p>
-                </div>
-              </li>
-            </ul>
-
-            <div class="social-links">
-              <h3 data-i18n="contact.connect">Connect With Me</h3>
-              <div class="social-icons">
-                <a href="https://github.com/Schmeitzke" target="_blank" class="social-icon">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/camielschmeitz/" target="_blank" class="social-icon">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </div>
+        <!-- Blog Post Card 1 -->
+        <div class="card blog-post-card slide-up">
+          <a href="blogs/blog-post-1.html" class="blog-card-link">
+            <div class="blog-thumbnail">
+               <div class="thumbnail-placeholder" style="background-image: url('images/blog_1.png');"></div>
             </div>
+            <div class="card-body">
+              <h3 class="card-title" data-i18n="blog.post1.title">Think AI is Just ChatGPT? Think Again</h3>
+              <div class="blog-meta">
+                <span class="blog-writer" data-i18n="blog.writer">By Camiel Schmeitz</span> -
+                <span class="blog-date" data-i18n="blog.post1.date">April 16, 2025</span>
+              </div>
+              <p class="blog-excerpt" data-i18n="blog.post1.excerpt">Discover the true AI landscape beyond just ChatGPT. Understand different models, debunk common myths, explore powerful alternatives, and see AI's real potential.</p>
+            </div>
+          </a>
+          <div class="card-footer">
+              <a href="blogs/blog-post-1.html" class="btn btn-outline btn-sm" data-i18n="blog.read_more">Read More</a>
+              <a href="https://www.linkedin.com/pulse/think-ai-just-chatgpt-again-camiel-schmeitz-w5m2e" class="blog-linkedin-link" target="_blank" rel="noopener noreferrer" data-i18n="blog.linkedin_link_text" aria-label="View on LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
           </div>
         </div>
+
+        <!-- Blog Post Card 2 (Placeholder) -->
+        <div class="card blog-post-card slide-up delay-100">
+           <a href="#" class="blog-card-link">
+            <div class="blog-thumbnail">
+              <div class="thumbnail-placeholder" style="background-image: url('images/placeholder-16x9-alt.png');"></div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title" data-i18n="blog.post2.title">Blog 2 coming soon...</h3>
+              <div class="blog-meta">
+                <span class="blog-writer" data-i18n="blog.writer">By Camiel Schmeitz</span> -
+                <span class="blog-date" data-i18n="blog.post2.date">TBD</span>
+              </div>
+              <p class="blog-excerpt" data-i18n="blog.post2.excerpt">This blog will be about AI models other than the famous LLMs.</p>
+            </div>
+          </a>
+          <div class="card-footer">
+              <a href="#" class="btn btn-outline btn-sm" data-i18n="blog.read_more">Read More</a>
+              <a href="#" class="blog-linkedin-link" target="_blank" rel="noopener noreferrer" data-i18n="blog.linkedin_link_text" aria-label="View on LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -124,10 +130,8 @@
     </div>
   </footer>
 
-  <!-- JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Mobile menu toggle
       const menuToggle = document.querySelector('.menu-toggle');
       const navList = document.querySelector('.nav-list');
       const overlay = document.querySelector('.overlay');
@@ -148,15 +152,12 @@
         });
       }
 
-      // Header scroll effect
       const header = document.querySelector('.header');
       let lastScrollY = window.scrollY;
 
       window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
           header.classList.add('scrolled');
-
-          // Hide header on scroll down, show on scroll up
           if (window.scrollY > lastScrollY) {
             header.classList.add('hidden');
           } else {
@@ -165,7 +166,6 @@
         } else {
           header.classList.remove('scrolled');
         }
-
         lastScrollY = window.scrollY;
       });
     });

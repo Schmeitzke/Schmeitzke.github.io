@@ -31,11 +31,12 @@
           <li><a href="index.html" class="nav-link" data-i18n="topbar.home">Home</a></li>
           <li><a href="about.html" class="nav-link" data-i18n="topbar.about">About</a></li>
           <li><a href="portfolio.html" class="nav-link" data-i18n="topbar.projects">Projects</a></li>
+          <li><a href="blog.html" class="nav-link" data-i18n="topbar.blog">Blog</a></li> <!-- Added Blog Link -->
           <li><a href="cv.html" class="nav-link active" data-i18n="topbar.cv">CV</a></li>
           <li><a href="contact.html" class="nav-link" data-i18n="topbar.contact">Contact</a></li>
         </ul>
       </nav>
-      
+
       <!-- Language Selector Dropdown -->
       <div class="language-selector">
         <div class="lang-dropdown">
@@ -50,7 +51,7 @@
     </div>
   </header>
   <div class="overlay"></div>
-  
+
   <!-- Page Header -->
   <section class="section page-header py-8">
     <div class="container">
@@ -58,7 +59,7 @@
       <p class="lead slide-up delay-100" data-i18n="cv.subtitle">Data Science & AI Developer</p>
     </div>
   </section>
-  
+
   <!-- CV Content -->
   <section class="section cv-section py-12">
     <div class="container">
@@ -68,7 +69,7 @@
           <!-- Experience Section -->
           <div class="cv-block">
             <h2 class="cv-block-title" data-i18n="cv.experience">Experience</h2>
-            
+
             <!-- Experience Item 1 -->
             <div class="cv-item">
               <div class="cv-item-header">
@@ -80,7 +81,7 @@
                 <p data-i18n="cv.backend_desc">Collaborated on the development of an advanced AI-driven analytics platform, focusing on machine learning model creation, data management, and full-stack application development to support automated decision-making processes on the options and futures market.</p>
               </div>
             </div>
-            
+
             <!-- Experience Item 2 -->
             <div class="cv-item">
               <div class="cv-item-header">
@@ -92,7 +93,7 @@
                 <p data-i18n="cv.annotator_desc">Independent contractor focusing on the assessment of large language models (LLMs) and annotation of training data.</p>
               </div>
             </div>
-            
+
             <!-- Experience Item 3 -->
             <div class="cv-item">
               <div class="cv-item-header">
@@ -105,11 +106,11 @@
               </div>
             </div>
           </div>
-          
+
           <!-- Education Section -->
           <div class="cv-block">
             <h2 class="cv-block-title" data-i18n="cv.education">Education</h2>
-            
+
             <!-- Education Item 1 -->
             <div class="cv-item">
               <div class="cv-item-header">
@@ -120,7 +121,7 @@
                 <p>Maastricht University</p>
               </div>
             </div>
-            
+
             <!-- Education Item 2 -->
             <div class="cv-item">
               <div class="cv-item-header">
@@ -131,7 +132,7 @@
                 <p>Maastricht University</p>
               </div>
             </div>
-            
+
             <!-- Education Item 3 -->
             <div class="cv-item">
               <div class="cv-item-header">
@@ -144,7 +145,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Sidebar -->
         <div class="cv-sidebar slide-up delay-100">
           <!-- Contact Info -->
@@ -169,7 +170,7 @@
               </li>
             </ul>
           </div>
-          
+
           <!-- Skills -->
           <div class="cv-block">
             <h2 class="cv-block-title" data-i18n="cv.skills">Skills</h2>
@@ -200,7 +201,7 @@
               <span class="cv-skill">Typescript</span>
             </div>
           </div>
-          
+
           <!-- Download CV -->
           <div class="cv-block">
             <div class="btn-download mt-8">
@@ -211,7 +212,7 @@
       </div>
     </div>
   </section>
-  
+
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -221,11 +222,11 @@
           <a href="https://github.com/Schmeitzke" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
           <a href="https://www.linkedin.com/in/camielschmeitz/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
         </div>
-        <p class="copyright">&copy; 2025 Camiel Schmeitz. <span data-i18n="home.copyright">All rights reserved.</span></p>
+        <p class="copyright">© 2025 Camiel Schmeitz. <span data-i18n="home.copyright">All rights reserved.</span></p>
       </div>
     </div>
   </footer>
-  
+
   <!-- JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -233,7 +234,7 @@
       const menuToggle = document.querySelector('.menu-toggle');
       const navList = document.querySelector('.nav-list');
       const overlay = document.querySelector('.overlay');
-      
+
       if (menuToggle && navList && overlay) {
         menuToggle.addEventListener('click', function() {
           menuToggle.classList.toggle('active');
@@ -241,7 +242,7 @@
           overlay.classList.toggle('active');
           document.body.classList.toggle('no-scroll');
         });
-        
+
         overlay.addEventListener('click', function() {
           menuToggle.classList.remove('active');
           navList.classList.remove('active');
@@ -249,15 +250,15 @@
           document.body.classList.remove('no-scroll');
         });
       }
-      
+
       // Header scroll effect
       const header = document.querySelector('.header');
       let lastScrollY = window.scrollY;
-      
+
       window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
           header.classList.add('scrolled');
-          
+
           // Hide header on scroll down, show on scroll up
           if (window.scrollY > lastScrollY) {
             header.classList.add('hidden');
@@ -267,7 +268,7 @@
         } else {
           header.classList.remove('scrolled');
         }
-        
+
         lastScrollY = window.scrollY;
       });
     });
