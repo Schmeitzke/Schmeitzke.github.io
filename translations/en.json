@@ -21,6 +21,8 @@
     "projects_section": "Recent Projects",
     "deep_research_desc": "Open-source deep-research system with enhanced API call system and optimized performance.",
     "view_all": "View All Projects",
+    "latest_blogs": "Latest Blogs",
+    "view_all_blogs": "View All Blogs",
     "cta_title": "Let's Work Together",
     "cta_desc": "Interested in collaborating on a project? Get in touch with me to discuss how we can work together.",
     "contact_me": "Contact Me",
@@ -132,4 +134,4 @@
       "excerpt": "This blog will be about AI models other than the famous LLMs."
     }
   }
-} 
+}

@@ -13,6 +13,10 @@ let i18nElements = [];
 async function loadTranslations(lang) {
   // Map 'li' to 'nl' for fetching translations
   const effectiveLang = (lang === 'li') ? 'nl' : lang;
+  // If loading English, clear any cached version to ensure fresh fetch
+  if (effectiveLang === 'en') {
+    delete translationsCache['en'];
+  }
 
   if (translationsCache[effectiveLang]) {
     console.log(`Using cached translations for ${effectiveLang}`);
@@ -126,8 +130,8 @@ async function applyTranslations() {
                      break;
                  }
              }
-             if (fallbackFound && typeof fallbackValue === 'string') { // Ensure the final value is a string
-                 value = fallbackValue + " [EN]"; // Append marker for clarity
+             if (fallbackFound && typeof fallbackValue === 'string') {
+                 value = fallbackValue;
                  console.warn(`Using English fallback for "${key}"`);
              } else {
                  console.error(`Fallback failed for key "${key}".`);
