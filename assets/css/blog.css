@@ -259,3 +259,17 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--space-6);
   }
+
+  /* Improve list readability inside blog post content */
+  .blog-post-content ul,
+  .blog-post-content ol {
+      margin-left: 1.5rem;        /* Indent lists */
+      margin-bottom: var(--space-6);
+      padding-left: 0;            /* Reset default */
+  }
+
+  .blog-post-content ul li,
+  .blog-post-content ol li {
+      margin-bottom: var(--space-2);
+      line-height: 1.6;
+  }

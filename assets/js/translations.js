@@ -11,8 +11,8 @@ let i18nElements = [];
 
 // Function to load translations for a specific language
 async function loadTranslations(lang) {
-  // Map 'li' to 'nl' for fetching translations
-  const effectiveLang = (lang === 'li') ? 'nl' : lang;
+  // Use the language as-is for fetching translations
+  const effectiveLang = lang;
   // If loading English, clear any cached version to ensure fresh fetch
   if (effectiveLang === 'en') {
     delete translationsCache['en'];
@@ -85,6 +85,9 @@ async function initTranslations() {
 
 // Apply translations to the page
 async function applyTranslations() {
+  // Always re-query for elements to handle dynamically loaded content
+  i18nElements = document.querySelectorAll('[data-i18n]');
+  
   console.log(`Applying translations for: ${currentLang}`);
   const translations = await loadTranslations(currentLang); // Pass currentLang (e.g., 'li')
 
@@ -154,12 +157,14 @@ async function applyTranslations() {
         return; // Skip applying if not a string
     }
 
-    // Apply translation if found (or fallback used)
-    // Use innerHTML for keys likely containing HTML, textContent otherwise
-    if (key.includes('.content') || key.includes('.excerpt') || key.includes('.title') || key.includes('.subtitle')) {
+    // Use innerHTML for keys that are expected to contain HTML
+    const contentKeys = ['.content', '.excerpt', '.title', '.subtitle', '.desc', '.journey_p1', '.journey_p2', '.exp_p1', '.exp_p2', '.exp_p3', '.approach_p', '.cta_p'];
+    const isContentKey = contentKeys.some(suffix => key.endsWith(suffix));
+
+    if (isContentKey) {
        element.innerHTML = value;
     } else if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-      if (element.placeholder !== undefined) { // Check specifically for placeholder attribute
+      if (element.placeholder !== undefined) {
           element.placeholder = value;
       } else {
           element.value = value;
