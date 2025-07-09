@@ -59,6 +59,11 @@
     "in_progress": "In Ontwikkeling",
     "finished": "Afgerond",
     "private_repo": "Privé Repo",
+    "in_talks": "In Bespreking",
+    "ailawyer_title": "AI-Advocaat",
+    "ailawyer_desc": "Ontwikkelde een Nederlandse AI juridisch adviseur met de Google Agents SDK, gebaseerd op internetbronnen, wetboeken en jurisprudentie.",
+    "upcoming_title": "Binnenkort bekend gemaakt",
+    "upcoming_desc": "Details volgen binnenkort – project is momenteel in gesprek met een potentiële klant.",
     "financial_title": "Financieel Sentiment LLM",
     "financial_desc": "Ik maakte deel uit van een team van drie personen dat een AI-gestuurd financieel systeem ontwikkelde dat geavanceerde taalmodellen integreert voor real-time marktinzichten. We bouwden een full-stack platform met een aangepaste trainingspijplijn, real-time gegevensverwerking, een React-interface en een Django-backend.",
     "deep_research_title": "Deep Research",
@@ -71,8 +76,7 @@
     "languages": "Talen",
     "ai_ml": "AI & ML",
     "web_dev": "Web Ontwikkeling",
-    "cta_title": "Geïnteresseerd in Samenwerken?",
-    "cta_subtitle": "Neem contact op om je projectideeën of mogelijke samenwerkingen te bespreken"
+    "cta_title": "Geïnteresseerd in Samenwerken?"
   },
   "cv": {
     "title": "Curriculum Vitae",
